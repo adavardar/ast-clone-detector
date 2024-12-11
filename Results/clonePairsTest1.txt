@@ -1,0 +1,42 @@
+[
+ {
+  "sourceCode": "class([public()],id(\"Example2\"),[],[],[],[method([public()],[],void(),id(\"d\"),[],[],block([declarationStatement(variables([],int(),[variable(id(\"x\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"w\"),[],number(\"4\"))]))]))])",
+  "targetFile": "Tests/TestClone1/Example2.java(1 - 1)",
+  "currentFile": "Tests/TestClone1/Example2.java(1 - 1)"
+ },
+ {
+  "sourceCode": "method([public()],[],void(),id(\"d\"),[],[],block([declarationStatement(variables([],int(),[variable(id(\"x\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"w\"),[],number(\"4\"))]))]))",
+  "targetFile": "Tests/TestClone1/Example2.java(2 - 3)",
+  "currentFile": "Tests/TestClone1/Example2.java(2 - 2)"
+ },
+ {
+  "sourceCode": "method([public()],[],void(),id(\"f\"),[],[],block([declarationStatement(variables([],int(),[variable(id(\"x\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"w\"),[],number(\"4\"))]))]))",
+  "targetFile": "Tests/TestClone1/Example.java(2 - 3)",
+  "currentFile": "Tests/TestClone1/Example.java(2 - 2)"
+ },
+ {
+  "sourceCode": "block([declarationStatement(variables([],int(),[variable(id(\"x\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"w\"),[],number(\"4\"))]))])",
+  "targetFile": "Tests/TestClone1/Example.java(3 - 5)",
+  "currentFile": "Tests/TestClone1/Example.java(3 - 3)"
+ },
+ {
+  "sourceCode": "block([declarationStatement(variables([],int(),[variable(id(\"x\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"w\"),[],number(\"4\"))]))])",
+  "targetFile": "Tests/TestClone1/Example2.java(3 - 5)",
+  "currentFile": "Tests/TestClone1/Example2.java(3 - 3)"
+ },
+ {
+  "sourceCode": "compilationUnit([],[class([public()],id(\"Example2\"),[],[],[],[method([public()],[],void(),id(\"d\"),[],[],block([declarationStatement(variables([],int(),[variable(id(\"x\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"w\"),[],number(\"4\"))]))]))])])",
+  "targetFile": "Tests/TestClone1/Example2.java(1 - 1)",
+  "currentFile": "Tests/TestClone1/Example2.java(1 - 1)"
+ },
+ {
+  "sourceCode": "class([public()],id(\"Example\"),[],[],[],[method([public()],[],void(),id(\"f\"),[],[],block([declarationStatement(variables([],int(),[variable(id(\"x\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"w\"),[],number(\"4\"))]))]))])",
+  "targetFile": "Tests/TestClone1/Example.java(1 - 1)",
+  "currentFile": "Tests/TestClone1/Example.java(1 - 1)"
+ },
+ {
+  "sourceCode": "compilationUnit([],[class([public()],id(\"Example\"),[],[],[],[method([public()],[],void(),id(\"f\"),[],[],block([declarationStatement(variables([],int(),[variable(id(\"x\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"w\"),[],number(\"4\"))]))]))])])",
+  "targetFile": "Tests/TestClone1/Example.java(1 - 1)",
+  "currentFile": "Tests/TestClone1/Example.java(1 - 1)"
+ }
+]
