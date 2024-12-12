@@ -1,0 +1,50 @@
+{
+ "type2": {
+  "largestCloneClassesByLines": "[\"Tests/CodeClones3/Example2.java(7,12)\",\"Tests/CodeClones3/Example1.java(7,12)\"]",
+  "totalSize": 46,
+  "duplicationPercentage": "34.7826087000%",
+  "numberOfClonesClasses": 4,
+  "cloneExamples": [
+   {
+    "size": "6",
+    "sourceCode": "[expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"a\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"b\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"c\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"d\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"e\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"f\\\"\")]))]",
+    "targetFile": "Tests/CodeClones3/Example1.java(7,12)",
+    "currentFile": "Tests/CodeClones3/Example2.java(7,12)"
+   },
+   {
+    "size": "6",
+    "sourceCode": "[expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"a\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"b\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"c\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"d\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"e\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"f\\\"\")]))]",
+    "targetFile": "Tests/CodeClones3/Example2.java(7,12)",
+    "currentFile": "Tests/CodeClones3/Example1.java(7,12)"
+   },
+   {
+    "size": "2",
+    "sourceCode": "[expressionStatement(methodCall([],id(\"function1\"),[])),expressionStatement(methodCall([],id(\"function2\"),[]))]",
+    "targetFile": "Tests/CodeClones3/Example1.java(26,27)",
+    "currentFile": "Tests/CodeClones3/Example2.java(26,27)"
+   },
+   {
+    "size": "2",
+    "sourceCode": "[expressionStatement(methodCall([],id(\"function1\"),[])),expressionStatement(methodCall([],id(\"function2\"),[]))]",
+    "targetFile": "Tests/CodeClones3/Example2.java(26,27)",
+    "currentFile": "Tests/CodeClones3/Example1.java(26,27)"
+   }
+  ],
+  "duplicatedLines": {
+   "Tests/CodeClones3/Example2.java": 8,
+   "Tests/CodeClones3/Example1.java": 8
+  },
+  "numberOfClones": 2,
+  "largestCloneClassesByMember": [
+   "Tests/CodeClones3/Example2.java(7,12)",
+   "Tests/CodeClones3/Example1.java(7,12)",
+   "Tests/CodeClones3/Example1.java(26,27)",
+   "Tests/CodeClones3/Example2.java(26,27)"
+  ],
+  "totalDuplicated": 16.0,
+  "fileSize": {
+   "Tests/CodeClones3/Example2.java": 23,
+   "Tests/CodeClones3/Example1.java": 23
+  }
+ }
+}
