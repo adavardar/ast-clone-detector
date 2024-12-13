@@ -7,6 +7,7 @@ import Node;
 import Set;
 import String;
 
+
 // Set boundaries for the sequence
 
 // // Reused method from series 1: This method will return the number of effective lines(LOC).
@@ -58,25 +59,37 @@ bool isWhitespaceLine(str line) {
 }
 
 
-// Get the starting line of a piece of code
-int getStartLine (str s) {
-    list[str] chars = [];
-    int c1 = findFirst(s, "\<");
-    int c2 = findFirst(s, "\>");
-    temp1 = s[c1 + 1..c2];
-    int t1 = findFirst(temp1, ",");
+// extract the starting line number
+int getStartLine (str locationString) {
+    list[str] extractedChars = [];
 
-    s1 = temp1[0..t1];
+    int startIndex = findFirst(locationString, "\<");
+    int endIndex = findFirst(locationString, "\>");
 
-    return toInt(s1);
+    str contentBetween = locationString[startIndex + 1..endIndex];
+    int commaIndex = findFirst(contentBetween, ",");
+
+    str startLineString = contentBetween[0..commaIndex];
+
+    int startLine = toInt(startLineString);
+
+    return startLine;
 }
 
-// Get the file name of a piece of code
-str getFileName (str s) {
-    int f1 = findFirst(s, "///");
-    int f2 = findLast(s, "|");
 
-    return "<s[f1+3..f2]>";
+// extract the file name from a given string representatin of code location 
+str getFileName (str locationString) {
+    //find the start and end indices for the file name 
+    int startIndex = findFirst(locationString, "///");
+    int endIndex = findLast(locationString, "|");
+
+    // validate the indices to ensure the format is correct 
+    if (startIndex == -1 || endIndex == -1 || startIndex + 3 >= endIndex) {
+        return "Unknown";
+    }
+
+    // extract and return the file name 
+    return locationString[startIndex + 3..endIndex];
 }
 
 // Get the file location from a string

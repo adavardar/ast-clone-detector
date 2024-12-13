@@ -5,6 +5,8 @@ import Node;
 import IO;
 import List;
 import String;
+import lang::json::IO;
+
 
 // Return all clone classes from clone pairs
 set[list[str]] getCloneClasses (set[tuple[list[str], tuple[list[node],list[node]]]] clonepairs) {
@@ -32,7 +34,7 @@ set[list[str]] getCloneClasses (set[tuple[list[str], tuple[list[node],list[node]
     return(cloneClasses1);
 }
 
-// Get clone class data ready to be written to a json
+// Get clone class data ready to be written to a json; needed
 list[map[str,str]] cloneClassToFile (list[map[str,str]] cloneClassesData, set[list[str]] cloneClasses, bool isSequence) {
     int largestCloneClassSize = 0;
     list[str] largestCloneClassNames = [];
@@ -75,7 +77,7 @@ list[map[str,str]] cloneClassToFile (list[map[str,str]] cloneClassesData, set[li
     return cloneClassesData;
 }
 
-// Get clone pairs data ready to be written to a json (Sequence algorithm)
+// Get clone pairs data ready to be written to a json (Sequence algorithm); needed
 list[map[str,str]] clonePairsToFile (list[map[str,str]] clonePairsData, set[tuple[list[str], tuple[list[node],list[node]]]] clonepairs) {
 for(c <- clonepairs) {
         // Clone file 1
@@ -114,29 +116,6 @@ for(c <- clonepairs) {
         clonePairData +=("targetFile":("<fileName2>(<lineNumbers2[0]>,<lineNumbers2[size(lineNumbers2)-1]>)"));
         clonePairData +=("sourceCode":"<sourceCode>");
         clonePairData +=("size":"<size(lineNumbers1)>");
-        clonePairsData += clonePairData;
-    }
-
-    return clonePairsData;
-}
-
-// Get clone pairs data ready to be written to a json (Basic algorithm)
-list[map[str,str]] clonePairsToFileBasic (list[map[str,str]] clonePairsData, list[tuple[tuple[value,value],tuple[value,value]]] clonepairs) {
-    for(c <- clonepairs) {
-        str fileName1 = "";
-        list[int] lineNumbers1 = [];
-        fileName1 = getFileName("<c[0][0]>");
-        lineNumbers1 += getStartLine("<c[0][0]>");
-
-        str fileName2 = "";
-        list[int] lineNumbers2 = [];
-        fileName2 = getFileName("<c[1][0]>");
-        lineNumbers2 += getStartLine("<c[1][0]>");
-
-        map[str,str] clonePairData = ();
-        clonePairData +=("currentFile":("<fileName1>(<lineNumbers1[0]>,<lineNumbers1[size(lineNumbers1)-1]>)"));
-        clonePairData +=("targetFile":("<fileName2>(<lineNumbers2[0]>,<lineNumbers2[size(lineNumbers2)-1]>)"));
-        clonePairData +=("sourceCode":"<unsetRec(c[0][1])>");
         clonePairsData += clonePairData;
     }
 

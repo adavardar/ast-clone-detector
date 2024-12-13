@@ -84,13 +84,9 @@ map[str, value] cloneDetection(loc folder, str baseName, bool isType1, map[str, 
     cloningData += getFileData(dataCloneClass, fileLines, isType1, dataClonePair);
 
     // Write sequence data to a json folder.
-    saveCloneResults(baseName, dataCloneClass, dataClonePair, cloningData);
+    writeJSON(|cwd:///Results/<baseName>/cloning_data_<baseName>.txt|, cloningData, indent=1);
+
 
     return cloningData;
 }
 
-void saveCloneResults(str baseName, list[value] dataCloneClass, list[value] dataClonePair, map[str, value] cloningData) {
-        writeJSON(|cwd:///Results/<baseName>/clone_class_<baseName>.txt|, dataCloneClass, indent=1);
-        writeJSON(|cwd:///Results/<baseName>/clone_pair_<baseName>.txt|, dataClonePair, indent=1);
-        writeJSON(|cwd:///Results/<baseName>/cloning_data_<baseName>.txt|, cloningData, indent=1);
-    }
