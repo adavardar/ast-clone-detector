@@ -10,8 +10,59 @@ import String;
 // We first remove all the metadata of the node and we then hash using the md5hash.
 str hash (value s) { return md5Hash(unsetRec(s)); }
 
-// Set boundaries for the sequence
 bool thresholdSequence (int x, int min, int max) { return x >= min && x <= max; }
+
+
+// Set boundaries for the sequence
+
+// // Reused method from series 1: This method will return the number of effective lines(LOC).
+// this function counts the non-comment, non-empty lines in a file. 
+// it reads the file, removes block comments, and counts the valid lines. 
+
+//int countNonCommentNonEmptyLines(loc filePath) 
+int countEffectiveLines(loc filePath) {
+    str fileContent = "";
+
+    // read the file content and return 0 if the file cannot be read. 
+    try fileContent = readFile(filePath); 
+        catch: return 0;
+
+    fileContent = removeBlockComments(fileContent);
+
+    // split the file content into lines. 
+    list[str] lines = split("\n", fileContent);
+
+    int validCodeLineCount = 0; 
+
+    for (str line <- lines) { // iterate through each line and check if it is a valid code line. 
+        line = trim(line);
+        if (isNonCommentNonEmptyLine(line)) {
+            validCodeLineCount += 1;  
+        }
+    }
+
+    return validCodeLineCount;
+}   
+
+// this function removes block comments (/* ... */) from the content of a file. 
+str removeBlockComments(str content) {
+    for (/<multiLineComment:\/\*[\s\S]*?\*\/>/ := content) {
+        content = replaceAll(content, multiLineComment, "");
+    }
+
+    return content;
+}
+
+// this function checks if a line of code is a valid non-commnet, non-empty line. 
+bool isNonCommentNonEmptyLine(str line) {
+    return !startsWith(line, "//") && !isWhitespaceLine(line);
+}
+
+//bool isOnlyWhitespace(str line) 
+bool isWhitespaceLine(str line) {
+  return /^\s*$/ := line;
+}
+
 
 // Get the starting line of a piece of code
 int getStartLine (str s) {
@@ -47,33 +98,6 @@ str removeLoc (str s) {
     return s[0..leftBracket];
 }
 
-// Reused method from series 1: This method will return the number of effective lines(LOC).
-int countEffectiveLines(loc file) {
-    str content = "";
-    try content = readFile(file); catch: return 0; 
-
-    for (/<comment:\/\*[\s\S]*?\*\/>/ := content) { 
-        content = replaceAll(content, comment, ""); // Remove multi lines comments /* */
-    }
-
-    list[str] lines = split("\n", content);
-    int count = 0;
-    bool inBlockComment = false;
-
-    for (str line <- lines) {
-      line = trim(line);
-
-      if(!isWhitespaceLine(line) && !startsWith(line, "//")) {
-        count+=1; 
-      }
-    }
-
-    return count;
-}
-
-bool isWhitespaceLine(str line) {
-  return /^\s*$/ := line;
-}
 
 // Returns the number of lines of the whole files system, and the number of lines of a specific file.
 tuple[map[str, int], int] getFileLines (loc file) {
