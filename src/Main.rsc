@@ -1,7 +1,7 @@
 module Main
 
 import HelperFunctions;
-import SequenceTemp;
+import Sequence;
 import CloneHelper;
 
 import lang::json::IO;
@@ -61,9 +61,9 @@ map[str, value] cloneDetection(loc folder, str baseName, bool isType1, map[str, 
 
     // Sequence algorithm: Return all subsequences.
     if (isTest) {
-        hashMap = sequence(hashMap, TEST_MIN_CLONE_SIZE, TEST_MAX_CLONE_SIZE, folder, isType1);
+        hashMap = sequenceAlgorithm(hashMap, TEST_MIN_CLONE_SIZE, TEST_MAX_CLONE_SIZE, folder, isType1);
     } else {
-        hashMap = sequence(hashMap, MIN_CLONE_SIZE, MAX_CLONE_SIZE, folder, isType1);
+        hashMap = sequenceAlgorithm(hashMap, MIN_CLONE_SIZE, MAX_CLONE_SIZE, folder, isType1);
     }
 
     // Sequence algorithm: Return all clone pairs and subsumination after performing the sequence algorithm.

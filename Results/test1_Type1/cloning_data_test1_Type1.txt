@@ -1,51 +1,51 @@
 {
  "type2": {
-  "largestCloneClassesByLines": "[\"Tests/CodeClones1/Example2.java(7,9)\",\"Tests/CodeClones1/Example3.java(7,9)\"]",
+  "largestCloneClassesByLines": "[\"Tests/CodeClones1/Example3.java(7,10)\",\"Tests/CodeClones1/Example2.java(7,10)\",\"Tests/CodeClones1/Example.java(13,16)\",\"Tests/CodeClones1/Example.java(25,28)\"]",
   "totalSize": 50,
-  "duplicationPercentage": "16.00%",
-  "numberOfClonesClasses": 5,
+  "duplicationPercentage": "44.00%",
+  "numberOfClonesClasses": 26,
   "cloneExamples": [
    {
-    "size": "2",
-    "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
-    "targetFile": "Tests/CodeClones1/Example3.java(7,8)",
-    "currentFile": "Tests/CodeClones1/Example.java(5,6)"
+    "size": "4",
+    "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+    "targetFile": "Tests/CodeClones1/Example.java(13,16)",
+    "currentFile": "Tests/CodeClones1/Example.java(25,28)"
    },
    {
-    "size": "2",
-    "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
-    "targetFile": "Tests/CodeClones1/Example.java(5,6)",
-    "currentFile": "Tests/CodeClones1/Example2.java(7,8)"
+    "size": "4",
+    "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+    "targetFile": "Tests/CodeClones1/Example.java(25,28)",
+    "currentFile": "Tests/CodeClones1/Example.java(13,16)"
    },
    {
-    "size": "2",
-    "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
-    "targetFile": "Tests/CodeClones1/Example.java(5,6)",
-    "currentFile": "Tests/CodeClones1/Example3.java(7,8)"
+    "size": "1",
+    "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\")))]",
+    "targetFile": "Tests/CodeClones1/Example.java(15,15)",
+    "currentFile": "Tests/CodeClones1/Example.java(7,7)"
    },
    {
-    "size": "2",
-    "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
-    "targetFile": "Tests/CodeClones1/Example2.java(7,8)",
-    "currentFile": "Tests/CodeClones1/Example.java(5,6)"
+    "size": "1",
+    "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\")))]",
+    "targetFile": "Tests/CodeClones1/Example.java(27,27)",
+    "currentFile": "Tests/CodeClones1/Example.java(7,7)"
    },
    {
-    "size": "3",
-    "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"c\"),\"=\",number(\"3\")))]",
-    "targetFile": "Tests/CodeClones1/Example3.java(7,9)",
-    "currentFile": "Tests/CodeClones1/Example2.java(7,9)"
+    "size": "1",
+    "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\")))]",
+    "targetFile": "Tests/CodeClones1/Example.java(7,7)",
+    "currentFile": "Tests/CodeClones1/Example.java(27,27)"
    }
   ],
   "duplicatedLines": {
-   "Tests/CodeClones1/Example.java": 2,
-   "Tests/CodeClones1/Example3.java": 3,
-   "Tests/CodeClones1/Example2.java": 3
+   "Tests/CodeClones1/Example.java": 14,
+   "Tests/CodeClones1/Example3.java": 4,
+   "Tests/CodeClones1/Example2.java": 4
   },
   "numberOfClones": 3,
   "largestCloneClassesByMember": [
-   "Tests/CodeClones1/Example.java(5,6)"
+   "Tests/CodeClones1/Example.java(22,22)"
   ],
-  "totalDuplicated": 8.0,
+  "totalDuplicated": 22.0,
   "fileSize": {
    "Tests/CodeClones1/Example.java": 28,
    "Tests/CodeClones1/Example3.java": 11,

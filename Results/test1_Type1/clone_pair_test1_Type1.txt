@@ -1,38 +1,266 @@
 [
  {
-  "size": "2",
-  "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
-  "targetFile": "Tests/CodeClones1/Example3.java(7,8)",
-  "currentFile": "Tests/CodeClones1/Example.java(5,6)"
+  "size": "4",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(13,16)",
+  "currentFile": "Tests/CodeClones1/Example.java(25,28)"
+ },
+ {
+  "size": "4",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(25,28)",
+  "currentFile": "Tests/CodeClones1/Example.java(13,16)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(15,15)",
+  "currentFile": "Tests/CodeClones1/Example.java(7,7)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(27,27)",
+  "currentFile": "Tests/CodeClones1/Example.java(7,7)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(7,7)",
+  "currentFile": "Tests/CodeClones1/Example.java(27,27)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(7,7)",
+  "currentFile": "Tests/CodeClones1/Example.java(15,15)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(22,22)",
+  "currentFile": "Tests/CodeClones1/Example3.java(8,8)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(25,25)",
+  "currentFile": "Tests/CodeClones1/Example.java(22,22)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(6,6)",
+  "currentFile": "Tests/CodeClones1/Example.java(25,25)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(22,22)",
+  "currentFile": "Tests/CodeClones1/Example2.java(8,8)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(6,6)",
+  "currentFile": "Tests/CodeClones1/Example.java(13,13)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(13,13)",
+  "currentFile": "Tests/CodeClones1/Example.java(6,6)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(25,25)",
+  "currentFile": "Tests/CodeClones1/Example.java(6,6)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example3.java(8,8)",
+  "currentFile": "Tests/CodeClones1/Example.java(22,22)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example2.java(8,8)",
+  "currentFile": "Tests/CodeClones1/Example.java(22,22)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(13,13)",
+  "currentFile": "Tests/CodeClones1/Example.java(22,22)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(22,22)",
+  "currentFile": "Tests/CodeClones1/Example.java(13,13)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(22,22)",
+  "currentFile": "Tests/CodeClones1/Example.java(25,25)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(6,6)",
+  "currentFile": "Tests/CodeClones1/Example.java(22,22)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(22,22)",
+  "currentFile": "Tests/CodeClones1/Example.java(6,6)"
  },
  {
   "size": "2",
-  "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
-  "targetFile": "Tests/CodeClones1/Example.java(5,6)",
-  "currentFile": "Tests/CodeClones1/Example2.java(7,8)"
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(13,14)",
+  "currentFile": "Tests/CodeClones1/Example3.java(8,9)"
  },
  {
   "size": "2",
-  "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\")))]",
+  "targetFile": "Tests/CodeClones1/Example2.java(8,9)",
+  "currentFile": "Tests/CodeClones1/Example.java(25,26)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\")))]",
+  "targetFile": "Tests/CodeClones1/Example3.java(8,9)",
+  "currentFile": "Tests/CodeClones1/Example.java(13,14)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(13,14)",
+  "currentFile": "Tests/CodeClones1/Example2.java(8,9)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\")))]",
+  "targetFile": "Tests/CodeClones1/Example2.java(8,9)",
+  "currentFile": "Tests/CodeClones1/Example.java(13,14)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(25,26)",
+  "currentFile": "Tests/CodeClones1/Example3.java(8,9)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\")))]",
+  "targetFile": "Tests/CodeClones1/Example3.java(8,9)",
+  "currentFile": "Tests/CodeClones1/Example.java(25,26)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(25,26)",
+  "currentFile": "Tests/CodeClones1/Example2.java(8,9)"
+ },
+ {
+  "size": "4",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example2.java(7,10)",
+  "currentFile": "Tests/CodeClones1/Example3.java(7,10)"
+ },
+ {
+  "size": "4",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example3.java(7,10)",
+  "currentFile": "Tests/CodeClones1/Example2.java(7,10)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[if(booleanLiteral(\"true\"),block([expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]))]",
+  "targetFile": "Tests/CodeClones1/Example.java(12,12)",
+  "currentFile": "Tests/CodeClones1/Example.java(24,24)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[if(booleanLiteral(\"true\"),block([expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]))]",
+  "targetFile": "Tests/CodeClones1/Example.java(24,24)",
+  "currentFile": "Tests/CodeClones1/Example.java(12,12)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(28,28)",
+  "currentFile": "Tests/CodeClones1/Example3.java(10,10)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example3.java(10,10)",
+  "currentFile": "Tests/CodeClones1/Example.java(16,16)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example2.java(10,10)",
+  "currentFile": "Tests/CodeClones1/Example.java(28,28)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(16,16)",
+  "currentFile": "Tests/CodeClones1/Example3.java(10,10)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(28,28)",
+  "currentFile": "Tests/CodeClones1/Example2.java(10,10)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example3.java(10,10)",
+  "currentFile": "Tests/CodeClones1/Example.java(28,28)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(16,16)",
+  "currentFile": "Tests/CodeClones1/Example2.java(10,10)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
+  "targetFile": "Tests/CodeClones1/Example2.java(10,10)",
+  "currentFile": "Tests/CodeClones1/Example.java(16,16)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
   "targetFile": "Tests/CodeClones1/Example.java(5,6)",
   "currentFile": "Tests/CodeClones1/Example3.java(7,8)"
  },
  {
   "size": "2",
-  "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
-  "targetFile": "Tests/CodeClones1/Example2.java(7,8)",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example.java(5,6)",
+  "currentFile": "Tests/CodeClones1/Example2.java(7,8)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example3.java(7,8)",
   "currentFile": "Tests/CodeClones1/Example.java(5,6)"
  },
  {
-  "size": "3",
-  "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"c\"),\"=\",number(\"3\")))]",
-  "targetFile": "Tests/CodeClones1/Example3.java(7,9)",
-  "currentFile": "Tests/CodeClones1/Example2.java(7,9)"
- },
- {
-  "size": "3",
-  "sourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"c\"),\"=\",number(\"3\")))]",
-  "targetFile": "Tests/CodeClones1/Example2.java(7,9)",
-  "currentFile": "Tests/CodeClones1/Example3.java(7,9)"
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\")))]",
+  "targetFile": "Tests/CodeClones1/Example2.java(7,8)",
+  "currentFile": "Tests/CodeClones1/Example.java(5,6)"
  }
 ]

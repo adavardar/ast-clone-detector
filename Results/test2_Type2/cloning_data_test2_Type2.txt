@@ -56,56 +56,52 @@
   }
  },
  "type2": {
-  "largestCloneClassesByLines": "[\"Tests/CodeClones2/Example2.java(7,12)\",\"Tests/CodeClones2/Example1.java(7,12)\"]",
+  "largestCloneClassesByLines": "[\"Tests/CodeClones2/Example2.java(7,13)\",\"Tests/CodeClones2/Example1.java(7,13)\"]",
   "totalSize": 42,
-  "duplicationPercentage": "47.6190476200%",
-  "numberOfClonesClasses": 6,
+  "duplicationPercentage": "61.9047619000%",
+  "numberOfClonesClasses": 20,
   "cloneExamples": [
    {
-    "size": "6",
-    "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"c\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"d\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"e\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"f\"),[],number(\"2\"))]))]",
-    "targetFile": "Tests/CodeClones2/Example2.java(7,12)",
-    "currentFile": "Tests/CodeClones2/Example1.java(7,12)"
+    "size": "2",
+    "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+    "targetFile": "Tests/CodeClones2/Example2.java(17,18)",
+    "currentFile": "Tests/CodeClones2/Example2.java(10,11)"
    },
    {
-    "size": "6",
-    "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"c\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"d\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"e\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"f\"),[],number(\"2\"))]))]",
-    "targetFile": "Tests/CodeClones2/Example1.java(7,12)",
-    "currentFile": "Tests/CodeClones2/Example2.java(7,12)"
+    "size": "2",
+    "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+    "targetFile": "Tests/CodeClones2/Example2.java(10,11)",
+    "currentFile": "Tests/CodeClones2/Example2.java(17,18)"
    },
    {
-    "size": "1",
-    "sourceCode": "[expressionStatement(assignment(id(\"aa\"),\"=\",number(\"0\")))]",
-    "targetFile": "Tests/CodeClones2/Example1.java(3,3)",
-    "currentFile": "Tests/CodeClones2/Example2.java(3,3)"
+    "size": "2",
+    "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+    "targetFile": "Tests/CodeClones2/Example1.java(10,11)",
+    "currentFile": "Tests/CodeClones2/Example2.java(17,18)"
    },
    {
-    "size": "1",
-    "sourceCode": "[expressionStatement(assignment(id(\"aa\"),\"=\",number(\"0\")))]",
-    "targetFile": "Tests/CodeClones2/Example2.java(3,3)",
-    "currentFile": "Tests/CodeClones2/Example1.java(3,3)"
+    "size": "2",
+    "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+    "targetFile": "Tests/CodeClones2/Example1.java(10,11)",
+    "currentFile": "Tests/CodeClones2/Example1.java(17,18)"
    },
    {
-    "size": "3",
-    "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"h\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"z\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"y\"),[],number(\"3\"))]))]",
-    "targetFile": "Tests/CodeClones2/Example1.java(17,19)",
-    "currentFile": "Tests/CodeClones2/Example2.java(17,19)"
+    "size": "2",
+    "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+    "targetFile": "Tests/CodeClones2/Example2.java(10,11)",
+    "currentFile": "Tests/CodeClones2/Example1.java(17,18)"
    }
   ],
   "duplicatedLines": {
-   "Tests/CodeClones2/Example2.java": 10,
-   "Tests/CodeClones2/Example1.java": 10
+   "Tests/CodeClones2/Example2.java": 13,
+   "Tests/CodeClones2/Example1.java": 13
   },
   "numberOfClones": 2,
   "largestCloneClassesByMember": [
-   "Tests/CodeClones2/Example2.java(7,12)",
-   "Tests/CodeClones2/Example1.java(7,12)",
-   "Tests/CodeClones2/Example1.java(17,19)",
-   "Tests/CodeClones2/Example2.java(17,19)",
-   "Tests/CodeClones2/Example1.java(3,3)",
-   "Tests/CodeClones2/Example2.java(3,3)"
+   "Tests/CodeClones2/Example1.java(17,18)",
+   "Tests/CodeClones2/Example2.java(17,18)"
   ],
-  "totalDuplicated": 20.0,
+  "totalDuplicated": 26.0,
   "fileSize": {
    "Tests/CodeClones2/Example2.java": 21,
    "Tests/CodeClones2/Example1.java": 21

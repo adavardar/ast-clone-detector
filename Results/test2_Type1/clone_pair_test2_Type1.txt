@@ -1,38 +1,230 @@
 [
  {
-  "size": "6",
-  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"c\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"d\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"e\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"f\"),[],number(\"2\"))]))]",
-  "targetFile": "Tests/CodeClones2/Example2.java(7,12)",
-  "currentFile": "Tests/CodeClones2/Example1.java(7,12)"
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(17,18)",
+  "currentFile": "Tests/CodeClones2/Example2.java(10,11)"
  },
  {
-  "size": "6",
-  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"c\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"d\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"e\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"f\"),[],number(\"2\"))]))]",
-  "targetFile": "Tests/CodeClones2/Example1.java(7,12)",
-  "currentFile": "Tests/CodeClones2/Example2.java(7,12)"
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(10,11)",
+  "currentFile": "Tests/CodeClones2/Example2.java(17,18)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(10,11)",
+  "currentFile": "Tests/CodeClones2/Example2.java(17,18)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(10,11)",
+  "currentFile": "Tests/CodeClones2/Example1.java(17,18)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(10,11)",
+  "currentFile": "Tests/CodeClones2/Example1.java(17,18)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(17,18)",
+  "currentFile": "Tests/CodeClones2/Example2.java(10,11)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(8,9)",
+  "currentFile": "Tests/CodeClones2/Example2.java(17,18)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(8,9)",
+  "currentFile": "Tests/CodeClones2/Example1.java(17,18)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(8,9)",
+  "currentFile": "Tests/CodeClones2/Example1.java(17,18)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(17,18)",
+  "currentFile": "Tests/CodeClones2/Example1.java(8,9)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(17,18)",
+  "currentFile": "Tests/CodeClones2/Example2.java(8,9)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(17,18)",
+  "currentFile": "Tests/CodeClones2/Example1.java(10,11)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(17,18)",
+  "currentFile": "Tests/CodeClones2/Example1.java(10,11)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(17,18)",
+  "currentFile": "Tests/CodeClones2/Example2.java(8,9)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(8,9)",
+  "currentFile": "Tests/CodeClones2/Example2.java(17,18)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(17,18)",
+  "currentFile": "Tests/CodeClones2/Example1.java(8,9)"
  },
  {
   "size": "1",
-  "sourceCode": "[expressionStatement(assignment(id(\"aa\"),\"=\",number(\"0\")))]",
-  "targetFile": "Tests/CodeClones2/Example1.java(3,3)",
-  "currentFile": "Tests/CodeClones2/Example2.java(3,3)"
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(17,17)",
+  "currentFile": "Tests/CodeClones2/Example1.java(12,12)"
  },
  {
   "size": "1",
-  "sourceCode": "[expressionStatement(assignment(id(\"aa\"),\"=\",number(\"0\")))]",
-  "targetFile": "Tests/CodeClones2/Example2.java(3,3)",
-  "currentFile": "Tests/CodeClones2/Example1.java(3,3)"
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(12,12)",
+  "currentFile": "Tests/CodeClones2/Example2.java(17,17)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(17,17)",
+  "currentFile": "Tests/CodeClones2/Example2.java(12,12)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(12,12)",
+  "currentFile": "Tests/CodeClones2/Example1.java(17,17)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(12,12)",
+  "currentFile": "Tests/CodeClones2/Example1.java(17,17)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(17,17)",
+  "currentFile": "Tests/CodeClones2/Example2.java(12,12)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(17,17)",
+  "currentFile": "Tests/CodeClones2/Example1.java(12,12)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(12,12)",
+  "currentFile": "Tests/CodeClones2/Example2.java(17,17)"
  },
  {
   "size": "3",
-  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"h\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"z\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"y\"),[],number(\"3\"))]))]",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"3\"))]))]",
   "targetFile": "Tests/CodeClones2/Example1.java(17,19)",
   "currentFile": "Tests/CodeClones2/Example2.java(17,19)"
  },
  {
   "size": "3",
-  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"h\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"z\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"y\"),[],number(\"3\"))]))]",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"3\"))]))]",
   "targetFile": "Tests/CodeClones2/Example2.java(17,19)",
   "currentFile": "Tests/CodeClones2/Example1.java(17,19)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"0\"))),if(greater(id(\"NormalizedName\"),number(\"1\")),block([declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],boolean(),[variable(id(\"NormalizedName\"),[],booleanLiteral(\"true\"))]))]),block([declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"3\"))]))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(3,5)",
+  "currentFile": "Tests/CodeClones2/Example1.java(3,5)"
+ },
+ {
+  "size": "2",
+  "sourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"0\"))),if(greater(id(\"NormalizedName\"),number(\"1\")),block([declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],boolean(),[variable(id(\"NormalizedName\"),[],booleanLiteral(\"true\"))]))]),block([declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"3\"))]))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(3,5)",
+  "currentFile": "Tests/CodeClones2/Example2.java(3,5)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(7,7)",
+  "currentFile": "Tests/CodeClones2/Example2.java(18,18)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(18,18)",
+  "currentFile": "Tests/CodeClones2/Example1.java(7,7)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(7,7)",
+  "currentFile": "Tests/CodeClones2/Example1.java(18,18)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(18,18)",
+  "currentFile": "Tests/CodeClones2/Example2.java(7,7)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(7,7)",
+  "currentFile": "Tests/CodeClones2/Example2.java(18,18)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(7,7)",
+  "currentFile": "Tests/CodeClones2/Example1.java(18,18)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(18,18)",
+  "currentFile": "Tests/CodeClones2/Example1.java(7,7)"
+ },
+ {
+  "size": "1",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(18,18)",
+  "currentFile": "Tests/CodeClones2/Example2.java(7,7)"
+ },
+ {
+  "size": "7",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],boolean(),[variable(id(\"NormalizedName\"),[],booleanLiteral(\"true\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example2.java(7,13)",
+  "currentFile": "Tests/CodeClones2/Example1.java(7,13)"
+ },
+ {
+  "size": "7",
+  "sourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"2\"))])),declarationStatement(variables([],boolean(),[variable(id(\"NormalizedName\"),[],booleanLiteral(\"true\"))]))]",
+  "targetFile": "Tests/CodeClones2/Example1.java(7,13)",
+  "currentFile": "Tests/CodeClones2/Example2.java(7,13)"
  }
 ]

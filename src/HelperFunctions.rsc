@@ -7,12 +7,6 @@ import Node;
 import Set;
 import String;
 
-// We first remove all the metadata of the node and we then hash using the md5hash.
-str hash (value s) { return md5Hash(unsetRec(s)); }
-
-bool thresholdSequence (int x, int min, int max) { return x >= min && x <= max; }
-
-
 // Set boundaries for the sequence
 
 // // Reused method from series 1: This method will return the number of effective lines(LOC).
