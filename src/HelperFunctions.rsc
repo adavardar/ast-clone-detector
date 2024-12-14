@@ -111,19 +111,6 @@ tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
     return <fileLineCounts, totalLineCount>;
 }
 
-// Get the file location from a string
-str getLoc (str s) {
-    int leftBracket = findFirst(s, "(" );
-    int rightBracket = findFirst(s, ")" );
-    return s[leftBracket+1..rightBracket];
-}
-
-// Remove the location of a string: This is done to get the correct name for the json
-str removeLoc (str s) {
-    int leftBracket = findFirst(s, "(" );
-    return s[0..leftBracket];
-}
-
 // Get the largest clone class by members: cant understand fully
 set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
     //println("Clone Data");
@@ -182,9 +169,18 @@ map[str, value] getFileData (list[map[str,str]] cloneClassesData, tuple[map[str,
             fileData+= ("largestCloneClassesByLines" : c["largestCloneClasses"]);
             continue;
         }
+        
+        // find the index of the left and right brackets
+        int leftIndex = findFirst("<c["fileName"]>", "(");
+        int rightIndex = findFirst("<c["fileName"]>", ")");
 
-        fileName = removeLoc("<c["fileName"]>");
-        splits = split(",",getLoc("<c["fileName"]>"));    
+        // for the JSON, remove the location part of the string to get the file name
+        str fileName = "<c["fileName"]>"[0 .. leftIndex];
+        // and extract the file location from a string
+        str fileLocation = "<c["fileName"]>"[leftIndex + 1 .. rightIndex];
+
+        splits = split(",",fileLocation);    
+
         list1 = [toInt(splits[0])..toInt(splits[1])+1];
 
         set[int] lineNumbers = {};
