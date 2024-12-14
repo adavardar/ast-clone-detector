@@ -270,31 +270,27 @@ set[tuple[list[str], tuple[list[node],list[node]]]] getClonePairs (
     return(detectedClonePairs);
 } 
 
+
+
+
 // Return all clone classes from clone pairs
-set[list[str]] getCloneClasses (set[tuple[list[str], tuple[list[node],list[node]]]] clonepairs) {
-    list[list[str]] cloneClasses = [];
+// Return all clone classes from clone pairs
+set[list[str]] getCloneClasses(set[tuple[list[str], tuple[list[node], list[node]]]] clonepairs) {
+    set[list[str]] cloneClasses = {}; // Use a set directly to avoid duplicate handling later
 
-    for(f <- clonepairs) {
-        list[str] temp = [];
-        for(c <- f[1][0]) {
-            temp+="<(c@src)>";
-        }
-        cloneClasses+=[temp];
-        temp = [];
-        for(c <- f[1][1]) {
-            temp+="<(c@src)>";
-        }
-        cloneClasses+=[temp];
+    for (pair <- clonepairs) {
+        // Extract the first and second clone groups from the pair
+        list[str] class1 = ["<(c@src)>" | c <- pair[1][0]];
+        list[str] class2 = ["<(c@src)>" | c <- pair[1][1]];
+
+        // Add both clone groups to the result set
+        cloneClasses += class1;
+        cloneClasses += class2;
     }
 
-    // Remove duplicates
-    set[list[str]] cloneClasses1 = {};
-    for(f <- cloneClasses) {
-        cloneClasses1+=f;
-    }
-
-    return(cloneClasses1);
+    return cloneClasses;
 }
+
 
 // Get clone class data ready to be written to a json; needed
 list[map[str,str]] cloneClassToFile (list[map[str,str]] cloneClassesData, set[list[str]] cloneClasses, bool isSequence) {

@@ -16,7 +16,6 @@
    "Tests/CodeClones3/Example1.java(26,27)",
    "Tests/CodeClones3/Example2.java(26,27)"
   ],
-  "BiggestCloneInLines": "[\"Tests/CodeClones3/Example2.java(7,12)\",\"Tests/CodeClones3/Example1.java(7,12)\"]",
   "ExampleClones": [
    {
     "SourceCode": "[expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"a\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"b\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"c\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"d\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"e\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"f\\\"\")]))]",
@@ -44,6 +43,7 @@
    }
   ],
   "TotalNumberOfClonePairs": 16.0,
-  "LineCountOfFolder": 46
+  "TotalLineCountOfFolder": 46,
+  "BiggestCloneInLines": "[\"Tests/CodeClones3/Example2.java(7,12)\",\"Tests/CodeClones3/Example1.java(7,12)\"]"
  }
 }

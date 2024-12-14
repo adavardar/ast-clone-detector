@@ -18,7 +18,6 @@
    "Tests/CodeClones2/Example1.java(3,3)",
    "Tests/CodeClones2/Example2.java(3,3)"
   ],
-  "BiggestCloneInLines": "[\"Tests/CodeClones2/Example2.java(7,12)\",\"Tests/CodeClones2/Example1.java(7,12)\"]",
   "ExampleClones": [
    {
     "SourceCode": "[declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"c\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"d\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"e\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"f\"),[],number(\"2\"))]))]",
@@ -52,6 +51,7 @@
    }
   ],
   "TotalNumberOfClonePairs": 20.0,
-  "LineCountOfFolder": 42
+  "TotalLineCountOfFolder": 42,
+  "BiggestCloneInLines": "[\"Tests/CodeClones2/Example2.java(7,12)\",\"Tests/CodeClones2/Example1.java(7,12)\"]"
  }
 }
