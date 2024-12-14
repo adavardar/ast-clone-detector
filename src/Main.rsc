@@ -77,7 +77,7 @@ map[str, value] cloneDetection(loc folder, str baseName, bool isType1, map[str, 
     // Sequence algorithm: Get folder data ready. 
     list[map[str,str]] dataClonePair = clonePairsToFile([], clonePairs);
 
-    list[map[str,str]] dataCloneClass = cloneClassToFile([], cloneClasses, true);
+    list[map[str,str]] dataCloneClass = cloneClassToFile([], cloneClasses);
 
     // Get specific folder data.
     cloningData += getFileData(dataCloneClass, fileLines, isType1, dataClonePair);

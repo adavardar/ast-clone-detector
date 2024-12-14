@@ -292,47 +292,46 @@ set[list[str]] getCloneClasses(set[tuple[list[str], tuple[list[node], list[node]
 
 
 // Get clone class data ready to be written to a json; needed
-list[map[str,str]] cloneClassToFile (list[map[str,str]] cloneClassesData, set[list[str]] cloneClasses, bool isSequence) {
+// Prepare clone class data for JSON output
+list[map[str, str]] cloneClassToFile(list[map[str, str]] cloneClassesData, set[list[str]] cloneClasses) {
     int largestCloneClassSize = 0;
     list[str] largestCloneClassNames = [];
-    map[str,int] cloneClassMap = ();
+    map[str, int] cloneClassSizeMap = ();
 
-    for(c <- cloneClasses) {
+    for (cloneClass <- cloneClasses) {
         list[int] lineNumbers = [];
-
         str fileName = "";
-        for(cc <- c) {
-            fileName = getFileName(cc);
-            lineNumbers += getStartLine(cc);
+
+        for (clone <- cloneClass) {
+            fileName = getFileName(clone);
+            lineNumbers += getStartLine(clone);
         }
 
-        // Add the filename and its corresponding clone lines to map.
-        map[str,str] temp = ();
+        // Add the filename and its corresponding clone lines to a temporary map
+        map[str, str] temp = ();
         temp += ("fileName":("<fileName>(<lineNumbers[0]>,<lineNumbers[size(lineNumbers)-1]>)"));
-
-        if(isSequence) {
-            if(size(lineNumbers) >= largestCloneClassSize) {
-                largestCloneClassSize = size(lineNumbers);
-            }
-
-            cloneClassMap += (("<fileName>(<lineNumbers[0]>,<lineNumbers[size(lineNumbers)-1]>)") : size(lineNumbers));
+        
+        if (size(lineNumbers) >= largestCloneClassSize) {
+            largestCloneClassSize = size(lineNumbers);
         }
 
+        cloneClassSizeMap += (("<fileName>(<lineNumbers[0]>,<lineNumbers[size(lineNumbers)-1]>)") : size(lineNumbers));
         cloneClassesData += temp;
     }
-    
-    if(isSequence) {
-        for(c <- cloneClassMap) {
-            if(cloneClassMap[c] == largestCloneClassSize) {
-                largestCloneClassNames += c;
-            }
-        }
 
-        cloneClassesData += ("largestCloneClasses" : "<largestCloneClassNames>");
+    for (entry <- cloneClassSizeMap) {
+        if (cloneClassSizeMap[entry] == largestCloneClassSize) {
+            largestCloneClassNames += entry;
+        }
     }
+
+    map[str, str] largestClassEntry = ();
+    largestClassEntry += ("largestCloneClasses" : "<largestCloneClassNames>");
+    cloneClassesData += largestClassEntry;
 
     return cloneClassesData;
 }
+
 
 // Get clone pairs data ready to be written to a json (Sequence algorithm); needed
 list[map[str,str]] clonePairsToFile (list[map[str,str]] clonePairsData, set[tuple[list[str], tuple[list[node],list[node]]]] clonepairs) {
