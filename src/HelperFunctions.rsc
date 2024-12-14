@@ -124,14 +124,15 @@ str removeLoc (str s) {
     return s[0..leftBracket];
 }
 
-
+// Get the largest clone class by members: cant understand fully
 set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
+    //println("Clone Data");
+    //println(cloneData);
     int maxFileCount = 0;
-    
     map[str, int] cloneCount = ();
-    set[str] largestCloneFiles = {};
+    set[str] maxCloneClassMembers = {};
 
-    //count occurrences of each clone in the clone data
+    // count occurrences of each clone in the clone data
     for (clone <- cloneData) {
         // extract the target file name and current file name from the clone data
         str targetFileName = clone["targetFile"];
@@ -141,19 +142,20 @@ set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
         cloneCount[targetFileName] = (targetFileName in cloneCount) ? cloneCount[targetFileName] + 1 : 1;
         cloneCount[currentFileName] = (currentFileName in cloneCount) ? cloneCount[currentFileName] + 1 : 1;
     }
-    // find the clones with the maximum count
+    //println("Clone Count");
+    //println(cloneCount);
+    // find the clone class members with the maximum count
     for (clone <- cloneCount) {
         if (cloneCount[clone] == maxFileCount) {
-            largestCloneFiles += clone;
+            maxCloneClassMembers += clone;
         } else if (cloneCount[clone] > maxFileCount) {
+            maxCloneClassMembers = {clone};
             maxFileCount = cloneCount[clone];
-            largestCloneFiles = {clone};
         } 
     }
-
-    //println(cloneCount);
+    //println(maxCloneClassMembers);
     // return the set of clones with the maximum count
-    return largestCloneFiles;
+    return maxCloneClassMembers;
 }
 
 // Retrieve data file data from the file system, which includes the following:
