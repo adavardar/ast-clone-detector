@@ -1,0 +1,53 @@
+{
+ "Type-1": {
+  "NumberOfFilesWithDuplicatedCode": 3,
+  "LineCountOfFiles": {
+   "Tests/CodeClones1/": 50
+  },
+  "NumberOfClonesClasses": 5,
+  "NumberOfDuplicatedLinesPerFile": {
+   "Tests/CodeClones1/Example.java": 2,
+   "Tests/CodeClones1/Example3.java": 3,
+   "Tests/CodeClones1/Example2.java": 3
+  },
+  "PercentageOfDuplicatedLines": "16.00%",
+  "BiggestCloneClassInMembers": [
+   "Tests/CodeClones1/Example.java(5,6)"
+  ],
+  "BiggestCloneInLines": "[\"Tests/CodeClones1/Example2.java(7,9)\",\"Tests/CodeClones1/Example3.java(7,9)\"]",
+  "ExampleClones": [
+   {
+    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
+    "Pair1": "Tests/CodeClones1/Example.java(5,6)",
+    "Pair2": "Tests/CodeClones1/Example3.java(7,8)",
+    "NumberOfLines": "2"
+   },
+   {
+    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
+    "Pair1": "Tests/CodeClones1/Example2.java(7,8)",
+    "Pair2": "Tests/CodeClones1/Example.java(5,6)",
+    "NumberOfLines": "2"
+   },
+   {
+    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
+    "Pair1": "Tests/CodeClones1/Example3.java(7,8)",
+    "Pair2": "Tests/CodeClones1/Example.java(5,6)",
+    "NumberOfLines": "2"
+   },
+   {
+    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
+    "Pair1": "Tests/CodeClones1/Example.java(5,6)",
+    "Pair2": "Tests/CodeClones1/Example2.java(7,8)",
+    "NumberOfLines": "2"
+   },
+   {
+    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"c\"),\"=\",number(\"3\")))]",
+    "Pair1": "Tests/CodeClones1/Example2.java(7,9)",
+    "Pair2": "Tests/CodeClones1/Example3.java(7,9)",
+    "NumberOfLines": "3"
+   }
+  ],
+  "TotalNumberOfClonePairs": 8.0,
+  "LineCountOfFolder": 50
+ }
+}

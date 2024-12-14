@@ -143,8 +143,8 @@ map[str, value] getFileData(list[map[str, str]] cloneClasses, tuple[map[str, int
     // Variable to store the total number of duplicated lines
     real totalDuplicatedLines = 0.0;
 
-    // The total number of lines in the file
-    int totalFileLines = fileLines[1];
+    // The total number of lines in the folder
+    int totalLineCount = fileLines[1];
 
     // Subtract one from the total size of cloneClasses to exclude the "largestCloneClasses" entry
     int totalCloneClasses = size(cloneClasses) - 1;
@@ -171,22 +171,22 @@ map[str, value] getFileData(list[map[str, str]] cloneClasses, tuple[map[str, int
     }
 
     // Calculate the percentage of duplicated lines relative to the total lines in the file
-    real duplicationPercentage = (totalDuplicatedLines / totalFileLines) * 100;
+    real duplicationPercentage = (totalDuplicatedLines / totalLineCount) * 100;
 
     // Populate the cloneStatistics map with various statistics
-    cloneStatistics += ("*totalFileLineCount": totalFileLines);  // Total size (number of lines)
-    cloneStatistics += ("*fileSpecificLineCount": fileLines[0]);  // Number of lines in the file
-    cloneStatistics += ("*totalCloneClasses": totalCloneClasses);    // Total number of clone classes
-    cloneStatistics += ("*totalDuplicatedLines": duplicatedLinesCount);  // Total number of duplicate lines
-    cloneStatistics += ("*totalDuplicatedLinesCount": totalDuplicatedLines);  // Total count of duplicated lines
-    cloneStatistics += ("PercentageOfDuplicatedLines": "<duplicationPercentage>%");  // Duplication percentage
-    cloneStatistics += ("*duplicatedLineCounts": fileCloneLineCounts);  // Map of duplicated lines per file
+    cloneStatistics += ("TotalLineCountOfFolder": totalLineCount); 
+    cloneStatistics += ("LineCountOfFiles": fileLines[0]);
+    cloneStatistics += ("NumberOfClonesClasses": totalCloneClasses); 
+    cloneStatistics += ("NumberOfFilesWithDuplicatedCode": duplicatedLinesCount);
+    cloneStatistics += ("TotalNumberOfClonePairs": totalDuplicatedLines);  
+    cloneStatistics += ("PercentageOfDuplicatedLines": "<duplicationPercentage>%");
+    cloneStatistics += ("NumberOfDuplicatedLinesPerFile": fileCloneLineCounts);
 
     // Process clone examples (adds more data to cloneStatistics)
     cloneStatistics = processCloneExamples(cloneExamples, cloneStatistics);
 
     // Return the result based on the isType2 flag (either 'type2' or 'type1' as the key)
-    return isType2 ? ("type2": cloneStatistics) : ("type1": cloneStatistics);
+    return isType2 ? ("Type-2": cloneStatistics) : ("Type-1": cloneStatistics);
 }
 
 
