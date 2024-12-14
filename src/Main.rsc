@@ -2,7 +2,6 @@ module Main
 
 import HelperFunctions;
 import Sequence;
-import CloneHelper;
 
 import lang::json::IO;
 import IO;

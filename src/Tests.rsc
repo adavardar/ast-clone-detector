@@ -1,7 +1,6 @@
 module Tests
 
 import Basic;
-import CloneHelper;
 import HelperFunctions;
 import Sequence;
 
