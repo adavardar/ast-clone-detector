@@ -4,6 +4,7 @@
   "LineCountOfFiles": {
    "Tests/CodeClones1/": 50
   },
+  "BiggestCloneClassLineSize": "3",
   "NumberOfClonesClasses": 5,
   "NumberOfDuplicatedLinesPerFile": {
    "Tests/CodeClones1/Example.java": 2,
@@ -15,6 +16,7 @@
    "Tests/CodeClones1/Example.java(5,6)"
   ],
   "BiggestCloneClassMemberCount": 4,
+  "TotalLineCountOfFolder": 50,
   "ExampleClones": [
    {
     "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
@@ -48,7 +50,6 @@
    }
   ],
   "TotalNumberOfClonePairs": 8.0,
-  "TotalLineCountOfFolder": 50,
-  "BiggestCloneInLines": "[\"Tests/CodeClones1/Example2.java(7,9)\",\"Tests/CodeClones1/Example3.java(7,9)\"]"
+  "BiggestCloneClassInLines": "[\"Tests/CodeClones1/Example2.java(7,9)\",\"Tests/CodeClones1/Example3.java(7,9)\"]"
  }
 }

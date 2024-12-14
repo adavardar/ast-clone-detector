@@ -4,6 +4,7 @@
   "LineCountOfFiles": {
    "Tests/CodeClones1/": 50
   },
+  "BiggestCloneClassLineSize": "3",
   "NumberOfClonesClasses": 5,
   "NumberOfDuplicatedLinesPerFile": {
    "Tests/CodeClones1/Example.java": 2,
@@ -15,6 +16,7 @@
    "Tests/CodeClones1/Example.java(5,6)"
   ],
   "BiggestCloneClassMemberCount": 4,
+  "TotalLineCountOfFolder": 50,
   "ExampleClones": [
    {
     "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
@@ -48,14 +50,14 @@
    }
   ],
   "TotalNumberOfClonePairs": 8.0,
-  "TotalLineCountOfFolder": 50,
-  "BiggestCloneInLines": "[\"Tests/CodeClones1/Example2.java(7,9)\",\"Tests/CodeClones1/Example3.java(7,9)\"]"
+  "BiggestCloneClassInLines": "[\"Tests/CodeClones1/Example2.java(7,9)\",\"Tests/CodeClones1/Example3.java(7,9)\"]"
  },
  "Type-2": {
   "NumberOfFilesWithDuplicatedCode": 3,
   "LineCountOfFiles": {
    "Tests/CodeClones1/": 50
   },
+  "BiggestCloneClassLineSize": "4",
   "NumberOfClonesClasses": 26,
   "NumberOfDuplicatedLinesPerFile": {
    "Tests/CodeClones1/Example.java": 14,
@@ -67,6 +69,7 @@
    "Tests/CodeClones1/Example.java(22,22)"
   ],
   "BiggestCloneClassMemberCount": 10,
+  "TotalLineCountOfFolder": 50,
   "ExampleClones": [
    {
     "SourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",
@@ -100,7 +103,6 @@
    }
   ],
   "TotalNumberOfClonePairs": 22.0,
-  "TotalLineCountOfFolder": 50,
-  "BiggestCloneInLines": "[\"Tests/CodeClones1/Example3.java(7,10)\",\"Tests/CodeClones1/Example2.java(7,10)\",\"Tests/CodeClones1/Example.java(13,16)\",\"Tests/CodeClones1/Example.java(25,28)\"]"
+  "BiggestCloneClassInLines": "[\"Tests/CodeClones1/Example3.java(7,10)\",\"Tests/CodeClones1/Example2.java(7,10)\",\"Tests/CodeClones1/Example.java(13,16)\",\"Tests/CodeClones1/Example.java(25,28)\"]"
  }
 }

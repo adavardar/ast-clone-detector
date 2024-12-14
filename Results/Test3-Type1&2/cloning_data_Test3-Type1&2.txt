@@ -4,6 +4,7 @@
   "LineCountOfFiles": {
    "Tests/CodeClones3/": 46
   },
+  "BiggestCloneClassLineSize": "6",
   "NumberOfClonesClasses": 4,
   "NumberOfDuplicatedLinesPerFile": {
    "Tests/CodeClones3/Example2.java": 8,
@@ -17,6 +18,7 @@
    "Tests/CodeClones3/Example2.java(26,27)"
   ],
   "BiggestCloneClassMemberCount": 2,
+  "TotalLineCountOfFolder": 46,
   "ExampleClones": [
    {
     "SourceCode": "[expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"a\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"b\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"c\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"d\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"e\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"f\\\"\")]))]",
@@ -44,14 +46,14 @@
    }
   ],
   "TotalNumberOfClonePairs": 16.0,
-  "TotalLineCountOfFolder": 46,
-  "BiggestCloneInLines": "[\"Tests/CodeClones3/Example2.java(7,12)\",\"Tests/CodeClones3/Example1.java(7,12)\"]"
+  "BiggestCloneClassInLines": "[\"Tests/CodeClones3/Example2.java(7,12)\",\"Tests/CodeClones3/Example1.java(7,12)\"]"
  },
  "Type-2": {
   "NumberOfFilesWithDuplicatedCode": 2,
   "LineCountOfFiles": {
    "Tests/CodeClones3/": 46
   },
+  "BiggestCloneClassLineSize": "7",
   "NumberOfClonesClasses": 6,
   "NumberOfDuplicatedLinesPerFile": {
    "Tests/CodeClones3/Example2.java": 15,
@@ -67,6 +69,7 @@
    "Tests/CodeClones3/Example2.java(16,22)"
   ],
   "BiggestCloneClassMemberCount": 2,
+  "TotalLineCountOfFolder": 46,
   "ExampleClones": [
    {
     "SourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"4\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"6\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"5\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"3\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],plus(id(\"NormalizedName\"),id(\"NormalizedName\")))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],plus(id(\"NormalizedName\"),id(\"NormalizedName\")))])),declarationStatement(variables([],simpleType(id(\"NormalizedName\")),[variable(id(\"NormalizedName\"),[],stringLiteral(\"\\\"Hello world\\\"\"))]))]",
@@ -100,7 +103,6 @@
    }
   ],
   "TotalNumberOfClonePairs": 30.0,
-  "TotalLineCountOfFolder": 46,
-  "BiggestCloneInLines": "[\"Tests/CodeClones3/Example1.java(15,21)\",\"Tests/CodeClones3/Example2.java(16,22)\"]"
+  "BiggestCloneClassInLines": "[\"Tests/CodeClones3/Example1.java(15,21)\",\"Tests/CodeClones3/Example2.java(16,22)\"]"
  }
 }

@@ -146,8 +146,8 @@ map[str, value] getFileData(list[map[str, str]] cloneClasses, tuple[map[str, int
     // The total number of lines in the folder
     int totalLineCount = fileLines[1];
 
-    // Subtract one from the total size of cloneClasses to exclude the "largestCloneClasses" entry
-    int totalCloneClasses = size(cloneClasses) - 1;
+    // Subtract two from the total size of cloneClasses to exclude the "BiggestCloneClassInLines" entry and the "BiggestCloneClassSize" entry
+    int totalCloneClasses = size(cloneClasses) - 2;
 
     // Process cloneClasses to get the locations of cloned code lines
     fileCloneLocations = processCloneClassesData(cloneClasses, fileCloneLocations);
@@ -155,11 +155,14 @@ map[str, value] getFileData(list[map[str, str]] cloneClasses, tuple[map[str, int
     // Get the count of duplicated lines by examining the size of fileCloneLocations
     int duplicatedLinesCount = size(fileCloneLocations);
 
-    // Loop through the clone classes and handle the special case for "largestCloneClasses"
+    // Loop through the clone classes and handle the special case for "BiggestCloneClassInLines"
     for (cloneClass <- cloneClasses) {
-        // If the current clone class contains a "largestCloneClasses" entry, store it in cloneStatistics
-        if ("largestCloneClasses" in cloneClass) {
-            cloneStatistics["BiggestCloneInLines"] = cloneClass["largestCloneClasses"];
+        // If the current clone class contains a "BiggestCloneClassInLines" entry, store it in cloneStatistics
+        if ("BiggestCloneClassInLines" in cloneClass) {
+            cloneStatistics["BiggestCloneClassInLines"] = cloneClass["BiggestCloneClassInLines"];
+            continue;  // Skip further processing for this entry
+        } else if ("BiggestCloneClassLineSize" in cloneClass) {
+            cloneStatistics["BiggestCloneClassLineSize"] = cloneClass["BiggestCloneClassLineSize"];
             continue;  // Skip further processing for this entry
         }
     }
@@ -192,7 +195,8 @@ map[str, value] getFileData(list[map[str, str]] cloneClasses, tuple[map[str, int
 
 map[str, set[int]] processCloneClassesData(list[map[str, str]] cloneClassesData, map[str, set[int]] fileDuplicatedLOC) {
     for (clone <- cloneClassesData) {
-        if ("largestCloneClasses" in clone) continue;
+        if ("BiggestCloneClassInLines" in clone) continue;
+        if ("BiggestCloneClassLineSize" in clone) continue;
         // find the index of the left and right brackets
         str fileNameFull = clone["fileName"];
         int leftIndex = findFirst(fileNameFull, "(");
@@ -239,7 +243,7 @@ map[str, value] processCloneExamples(list[map[str, str]] allData, map[str, value
 
     biggerCloneClass = getLargeCloneClassMember(allData);
 
-    // add the largest clone classes by member to fileData
+    // add the biggest clone classes by member to fileData
     fileData += ("BiggestCloneClassInMembers": biggerCloneClass[0]);
     fileData += ("BiggestCloneClassMemberCount": biggerCloneClass[1]);
     
@@ -292,11 +296,10 @@ set[list[str]] getCloneClasses(set[tuple[list[str], tuple[list[node], list[node]
 }
 
 
-// Get clone class data ready to be written to a json; needed
-// Prepare clone class data for JSON output
+// prepare clone class data for JSON output
 list[map[str, str]] cloneClassToFile(list[map[str, str]] cloneClassesData, set[list[str]] cloneClasses) {
-    int largestCloneClassSize = 0;
-    list[str] largestCloneClassNames = [];
+    int biggestCloneClassSize = 0;
+    list[str] biggestCloneClassNames = [];
     map[str, int] cloneClassSizeMap = ();
 
     for (cloneClass <- cloneClasses) {
@@ -312,8 +315,8 @@ list[map[str, str]] cloneClassToFile(list[map[str, str]] cloneClassesData, set[l
         map[str, str] temp = ();
         temp += ("fileName":("<fileName>(<lineNumbers[0]>,<lineNumbers[size(lineNumbers)-1]>)"));
         
-        if (size(lineNumbers) >= largestCloneClassSize) {
-            largestCloneClassSize = size(lineNumbers);
+        if (size(lineNumbers) >= biggestCloneClassSize) {
+            biggestCloneClassSize = size(lineNumbers);
         }
 
         cloneClassSizeMap += (("<fileName>(<lineNumbers[0]>,<lineNumbers[size(lineNumbers)-1]>)") : size(lineNumbers));
@@ -321,14 +324,13 @@ list[map[str, str]] cloneClassToFile(list[map[str, str]] cloneClassesData, set[l
     }
 
     for (entry <- cloneClassSizeMap) {
-        if (cloneClassSizeMap[entry] == largestCloneClassSize) {
-            largestCloneClassNames += entry;
+        if (cloneClassSizeMap[entry] == biggestCloneClassSize) {
+            biggestCloneClassNames += entry;
         }
     }
 
-    map[str, str] largestClassEntry = ();
-    largestClassEntry += ("largestCloneClasses" : "<largestCloneClassNames>");
-    cloneClassesData += largestClassEntry;
+    cloneClassesData += ("BiggestCloneClassInLines" : "<biggestCloneClassNames>");
+    cloneClassesData += ("BiggestCloneClassLineSize" : "<biggestCloneClassSize>");
 
     return cloneClassesData;
 }
