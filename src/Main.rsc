@@ -24,9 +24,9 @@ str main () {
 
     println("Starting the clone detection process...");
 
-    processFolder("test1", |cwd:///Tests/CodeClones1/|, true);
-    processFolder("test2", |cwd:///Tests/CodeClones2/|, true);
-    processFolder("test3", |cwd:///Tests/CodeClones3/|, true);
+    processFolder("Test1", |cwd:///Tests/CodeClones1/|, true);
+    processFolder("Test2", |cwd:///Tests/CodeClones2/|, true);
+    processFolder("Test3", |cwd:///Tests/CodeClones3/|, true);
 
     //processFolder(|cwd:///smallsql0.21_src|, "smallsql", false);
     //processFolder(|cwd:///hsqldb-2.3.1|, "hsqldb", false);
@@ -40,11 +40,11 @@ void processFolder(str baseName, loc folder, bool isTest) {
     println("Processing the <baseName> folder...");
     
     // Type1 clones
-    cloningData = cloneDetection(folder, "<baseName>_Type1", true, cloningData, isTest);
+    cloningData = cloneDetection(folder, "<baseName>-Type1", false, cloningData, isTest);
     //println(cloningData);
 
     // Type1 + Type2 clones
-    cloningData = cloneDetection(folder, "<baseName>_Type2", false, cloningData, isTest);
+    cloningData = cloneDetection(folder, "<baseName>-Type1&2", true, cloningData, isTest);
     //println(cloningData);
 
     println("");
