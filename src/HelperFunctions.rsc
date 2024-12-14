@@ -145,6 +145,36 @@ set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
     return maxCloneClassMembers;
 }
 
+void processCloneClassesData(list[map[str, str]] cloneClassesData, map[str, set[int]] fileDuplicatedLOC, map[str, value] fileData) {
+    for (clone <- cloneClassesData) {
+        if (contains(clone, "largestCloneClasses")) {
+            fileData += ("largestCloneClassesByLines": clone["largestCloneClasses"]);
+            continue;
+        }
+
+        // Find the index of the left and right brackets
+        str fileNameFull = clone["fileName"];
+        int leftIndex = findFirst(fileNameFull, "(");
+        int rightIndex = findFirst(fileNameFull, ")");
+
+        // For the JSON, remove the location part of the string to get the file name
+        str fileName = fileNameFull[0 .. leftIndex];
+        // Extract the file location from the string
+        str fileLocation = fileNameFull[leftIndex + 1 .. rightIndex];
+
+        list[str] splits = split(",", fileLocation);
+        list[int] lineNumbersList = [toInt(splits[0]) .. toInt(splits[1]) + 1];
+
+        set[int] lineNumbers = {lineNumbersList};
+
+        if (fileName in fileDuplicatedLOC) {
+            lineNumbers += fileDuplicatedLOC[fileName];
+        }
+
+        fileDuplicatedLOC[fileName] = lineNumbers;
+    }
+}
+
 // Retrieve data file data from the file system, which includes the following:
 // - Total number of lines
 // - Total number of duplicated lines
@@ -159,25 +189,26 @@ set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
 map[str, value] getFileData (list[map[str,str]] cloneClassesData, tuple[map[str, int], int] lines, bool type2, list[map[str,str]] allData) {
     map[str,set[int]] fileDuplicatedLOC = ();
     map[str, value] fileData = ();
+
     counter1 = 0;
     for(c1 <- cloneClassesData) {
         counter1 +=1;
     }
 
-    for(c <- cloneClassesData) {
-        if(contains("<c>", "largestCloneClasses")) {
-            fileData+= ("largestCloneClassesByLines" : c["largestCloneClasses"]);
+    for(clone <- cloneClassesData) {
+        if(contains("<clone>", "largestCloneClasses")) {
+            fileData+= ("largestCloneClassesByLines" : clone["largestCloneClasses"]);
             continue;
         }
-        
         // find the index of the left and right brackets
-        int leftIndex = findFirst("<c["fileName"]>", "(");
-        int rightIndex = findFirst("<c["fileName"]>", ")");
+        str fileNameFull = clone["fileName"];
+        int leftIndex = findFirst(fileNameFull, "(");
+        int rightIndex = findFirst(fileNameFull, ")");
 
         // for the JSON, remove the location part of the string to get the file name
-        str fileName = "<c["fileName"]>"[0 .. leftIndex];
+        str fileName = fileNameFull[0 .. leftIndex];
         // and extract the file location from a string
-        str fileLocation = "<c["fileName"]>"[leftIndex + 1 .. rightIndex];
+        str fileLocation = fileNameFull[leftIndex + 1 .. rightIndex];
 
         splits = split(",",fileLocation);    
 
@@ -188,13 +219,11 @@ map[str, value] getFileData (list[map[str,str]] cloneClassesData, tuple[map[str,
             lineNumbers+=l;
         }
         
-        for(f <- fileDuplicatedLOC) {
-            if(fileName in fileDuplicatedLOC){
-                lineNumbers += fileDuplicatedLOC[fileName];
-            }
+        if (fileName in fileDuplicatedLOC) {
+            lineNumbers += fileDuplicatedLOC[fileName];
         }
 
-        fileDuplicatedLOC+= (fileName : lineNumbers);
+        fileDuplicatedLOC[fileName] = lineNumbers;
     }
     
     map[str,int] fileDuplicatedLOC2 = ();
@@ -235,12 +264,7 @@ map[str, value] getFileData (list[map[str,str]] cloneClassesData, tuple[map[str,
         fileData += ("largestCloneClassesByMember":[]);
     }
 
-    if(type2) {
-        return ("type2" : fileData);
-    }
-    else {
-        return ("type1" : fileData);
-    }
+    return type2 ? ("type2": fileData) : ("type1": fileData);
 }
 // retrieve pairs of sequences that are clones based on hash map, it compares sequences in the hash map to identify all clone pairs 
 set[tuple[list[str], tuple[list[node],list[node]]]] getClonePairs (
