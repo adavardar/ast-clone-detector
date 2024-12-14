@@ -51,8 +51,7 @@
   ],
   "totalDuplicated": 30.0,
   "fileSize": {
-   "Tests/CodeClones3/Example2.java": 23,
-   "Tests/CodeClones3/Example1.java": 23
+   "Tests/CodeClones3/": 46
   }
  }
 }

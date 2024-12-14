@@ -58,9 +58,8 @@ bool isWhitespaceLine(str line) {
   return /^\s*$/ := line;
 }
 
-
 // extract the starting line number
-int getStartLine (str locationString) {
+int getStartLine(str locationString) {
     list[str] extractedChars = [];
 
     int startIndex = findFirst(locationString, "\<");
@@ -76,9 +75,8 @@ int getStartLine (str locationString) {
     return startLine;
 }
 
-
 // extract the file name from a given string representatin of code location 
-str getFileName (str locationString) {
+str getFileName(str locationString) {
     //find the start and end indices for the file name 
     int startIndex = findFirst(locationString, "///");
     int endIndex = findLast(locationString, "|");
@@ -105,22 +103,22 @@ str removeLoc (str s) {
     return s[0..leftBracket];
 }
 
+// this function computes the total number of non-comment, non-empty lines in all java files and returns the total number of lines and the number of lines of a specific file.
+tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
+//int computeTotalNonCommentNonEmptyLines(loc projectPath) {
+    int totalLineCount = 0; 
+    map[str, int] fileLineCounts = (); 
+    M3 model = createM3FromDirectory(projectPath);  
 
-// Returns the number of lines of the whole files system, and the number of lines of a specific file.
-tuple[map[str, int], int] getFileLines (loc file) {
-    M3 model = createM3FromDirectory(file);
-    int LOC = 0;
-    map[str, int] fileLOC = ();
-
+    // iterate through the files in the project model.  
     for (<loc file, _> <- model.containment) {
-        if(endsWith(file.path, ".java")) {
-            fLOC = countEffectiveLines(file);
-            LOC += fLOC;
-            fileLOC += (getFileName("<file>"): fLOC);
+        if (endsWith(file.path, ".java")) {
+            totalLineCount += countEffectiveLines(file); 
+            fileLineCounts += (getFileName("<projectPath>"): totalLineCount);
         }
     }
 
-    return <fileLOC, LOC>;
+    return <fileLineCounts, totalLineCount>;
 }
 
 // Get the largest clone class by members

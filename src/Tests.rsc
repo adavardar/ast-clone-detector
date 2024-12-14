@@ -34,7 +34,7 @@ test bool fileLocTest() {
 test bool getFileLinesTest () {
     // This file system has 3 files with the following sizes
     // [ 19, 11, 11] = 41
-    tuple[map[str, int], int] file = getFileLines(|cwd:///Tests/CodeClones1/|);
+    tuple[map[str, int], int] file = computeTotalNonCommentNonEmptyLines(|cwd:///Tests/CodeClones1/|);
     
     int count = 0;
     for(f <- file[0]) {

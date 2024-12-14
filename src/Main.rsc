@@ -54,7 +54,7 @@ void processFolder(str baseName, loc folder, bool isTest) {
 map[str, value] cloneDetection(loc folder, str baseName, bool isType1, map[str, value] cloningData, bool isTest) {
 
     // Get number of lines of the whole folder system and a specific folder. 
-    tuple[map[str,int], int] fileLines = getFileLines(folder);
+    tuple[map[str,int], int] fileLines = computeTotalNonCommentNonEmptyLines(folder);
 
     // Hashmap to keep track of all clones.
     map[list[str], list[list[node]]] hashMap = ();
