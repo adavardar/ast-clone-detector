@@ -90,22 +90,9 @@ str getFileName(str locationString) {
     return locationString[startIndex + 3..endIndex];
 }
 
-// Get the file location from a string
-str getLoc (str s) {
-    int leftBracket = findFirst(s, "(" );
-    int rightBracket = findFirst(s, ")" );
-    return s[leftBracket+1..rightBracket];
-}
-
-// Remove the location of a string: This is done to get the correct name for the json
-str removeLoc (str s) {
-    int leftBracket = findFirst(s, "(" );
-    return s[0..leftBracket];
-}
-
 // this function computes the total number of non-comment, non-empty lines in all java files and returns the total number of lines and the number of lines of a specific file.
 tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
-//int computeTotalNonCommentNonEmptyLines(loc projectPath) {
+//int getFileLines(loc projectPath) {
     int totalLineCount = 0; 
     map[str, int] fileLineCounts = (); 
     M3 model = createM3FromDirectory(projectPath);  
@@ -120,6 +107,20 @@ tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
 
     return <fileLineCounts, totalLineCount>;
 }
+
+// Get the file location from a string
+str getLoc (str s) {
+    int leftBracket = findFirst(s, "(" );
+    int rightBracket = findFirst(s, ")" );
+    return s[leftBracket+1..rightBracket];
+}
+
+// Remove the location of a string: This is done to get the correct name for the json
+str removeLoc (str s) {
+    int leftBracket = findFirst(s, "(" );
+    return s[0..leftBracket];
+}
+
 
 // Get the largest clone class by members
 set[str] getLargeCloneClassMember (list[map[str,str]] allData) {
