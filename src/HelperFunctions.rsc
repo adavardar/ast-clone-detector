@@ -271,8 +271,6 @@ set[tuple[list[str], tuple[list[node],list[node]]]] getClonePairs (
 } 
 
 
-
-
 // Return all clone classes from clone pairs
 set[list[str]] getCloneClasses(set[tuple[list[str], tuple[list[node], list[node]]]] clonePairs) {
     set[list[str]] cloneClassesSet = {};
