@@ -14,6 +14,7 @@
   "BiggestCloneClassInMembers": [
    "Tests/CodeClones1/Example.java(5,6)"
   ],
+  "BiggestCloneClassMemberCount": 4,
   "ExampleClones": [
    {
     "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
@@ -65,6 +66,7 @@
   "BiggestCloneClassInMembers": [
    "Tests/CodeClones1/Example.java(22,22)"
   ],
+  "BiggestCloneClassMemberCount": 10,
   "ExampleClones": [
    {
     "SourceCode": "[expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"3\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"4\"))),expressionStatement(assignment(id(\"NormalizedName\"),\"=\",number(\"5\")))]",

@@ -16,6 +16,7 @@
    "Tests/CodeClones3/Example1.java(26,27)",
    "Tests/CodeClones3/Example2.java(26,27)"
   ],
+  "BiggestCloneClassMemberCount": 2,
   "ExampleClones": [
    {
     "SourceCode": "[expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"a\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"b\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"c\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"d\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"e\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"f\\\"\")]))]",

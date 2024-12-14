@@ -102,35 +102,35 @@ tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
     return <fileLineCounts, totalLineCount>;
 }
 
-// get the biggest clone class in members
-set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
+// get the biggest clone class in members and its count
+tuple[set[str], int] getLargeCloneClassMember(list[map[str, str]] cloneData) {
     int maxFileCount = 0;
     map[str, int] cloneCount = ();
     set[str] maxCloneClassMembers = {};
 
-    // count occurrences of each clone in the clone data
+    // Count occurrences of each clone in the clone data
     for (clone <- cloneData) {
-        // extract the target file name and current file name from the clone data
-        str Pair2Name = clone["Pair2"];
-        str Pair1Name = clone["Pair1"];
+        // Extract the target file name and current file name from the clone data
+        str targetFile = clone["Pair2"];
+        str currentFile = clone["Pair1"];
 
-        // update the count for the target and current file
-        cloneCount[Pair2Name] = (Pair2Name in cloneCount) ? cloneCount[Pair2Name] + 1 : 1;
-        cloneCount[Pair1Name] = (Pair1Name in cloneCount) ? cloneCount[Pair1Name] + 1 : 1;
+        // Update the count for the target and current file
+        cloneCount[targetFile] = (targetFile in cloneCount) ? cloneCount[targetFile] + 1 : 1;
+        cloneCount[currentFile] = (currentFile in cloneCount) ? cloneCount[currentFile] + 1 : 1;
     }
 
-    // find the clone class members with the maximum count
-    for (clone <- cloneCount) {
-        if (cloneCount[clone] == maxFileCount) {
-            maxCloneClassMembers += clone;
-        } else if (cloneCount[clone] > maxFileCount) {
-            maxCloneClassMembers = {clone};
-            maxFileCount = cloneCount[clone];
-        } 
+    // Find the clone class members with the maximum count
+    for (file <- cloneCount) {
+        if (cloneCount[file] == maxFileCount) {
+            maxCloneClassMembers += file;
+        } else if (cloneCount[file] > maxFileCount) {
+            maxCloneClassMembers = {file};
+            maxFileCount = cloneCount[file];
+        }
     }
 
-    // return the set of clones with the maximum count
-    return maxCloneClassMembers;
+    // Return the set of clones with the maximum count and their count
+    return <maxCloneClassMembers, maxFileCount>;
 }
 
 // Function to process and gather statistics on clone data
@@ -237,9 +237,12 @@ map[str, value] processCloneExamples(list[map[str, str]] allData, map[str, value
     // add clone examples to fileData
     fileData += ("ExampleClones": cloneExamples);
 
-    // add the largest clone classes by member to fileData
-    fileData += ("BiggestCloneClassInMembers": getLargeCloneClassMember(allData));
+    biggerCloneClass = getLargeCloneClassMember(allData);
 
+    // add the largest clone classes by member to fileData
+    fileData += ("BiggestCloneClassInMembers": biggerCloneClass[0]);
+    fileData += ("BiggestCloneClassMemberCount": biggerCloneClass[1]);
+    
     return fileData;
 }
 

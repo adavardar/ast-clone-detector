@@ -16,6 +16,7 @@
    "Tests/CodeClones3/Example1.java(26,27)",
    "Tests/CodeClones3/Example2.java(26,27)"
   ],
+  "BiggestCloneClassMemberCount": 2,
   "ExampleClones": [
    {
     "SourceCode": "[expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"a\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"b\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"c\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"d\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"e\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"f\\\"\")]))]",
@@ -65,6 +66,7 @@
    "Tests/CodeClones3/Example1.java(15,21)",
    "Tests/CodeClones3/Example2.java(16,22)"
   ],
+  "BiggestCloneClassMemberCount": 2,
   "ExampleClones": [
    {
     "SourceCode": "[declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"4\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"6\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"5\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],number(\"3\"))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],plus(id(\"NormalizedName\"),id(\"NormalizedName\")))])),declarationStatement(variables([],int(),[variable(id(\"NormalizedName\"),[],plus(id(\"NormalizedName\"),id(\"NormalizedName\")))])),declarationStatement(variables([],simpleType(id(\"NormalizedName\")),[variable(id(\"NormalizedName\"),[],stringLiteral(\"\\\"Hello world\\\"\"))]))]",
