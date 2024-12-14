@@ -2,7 +2,7 @@ module Tests
 
 import Basic;
 import HelperFunctions;
-import Sequence;
+import SequenceAlgorithn;
 
 import IO;
 import Set;

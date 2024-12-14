@@ -356,3 +356,30 @@ for(c <- clonepairs) {
 
     return clonePairsData;
 }
+
+// retrieve pairs of sequences that are clones based on hash map, it compares sequences in the hash map to identify all clone pairs 
+set[tuple[list[str], tuple[list[node],list[node]]]] getClonePairs (
+    set[tuple[list[str], tuple[list[node],list[node]]]] detectedClonePairs,
+    map[list[str], list[list[node]]] sequenceHashMap) {
+    
+    for (sequenceHash <- sequenceHashMap) {
+        // retrieve sequences with the same hash 
+        list[list[node]] sequences = sequenceHashMap[sequenceHash];
+        // only consider hashes with multiple sequences 
+        if (size(sequences) <= 1) {
+            continue;
+        }
+            
+        for (seq1 <- sequences) {
+            for (seq2 <- sequences) { 
+                if(seq1 != seq2) { 
+                    if( <sequenceHash, <(seq1),(seq2)>> notin detectedClonePairs) {
+                        detectedClonePairs += <sequenceHash, <(seq1),(seq2)>>;
+                    }
+                }
+            }
+        }
+    }
+
+    return(detectedClonePairs);
+} 

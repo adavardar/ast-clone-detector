@@ -1,4 +1,4 @@
-module Sequence
+module SequenceAlgorithm
 
 import lang::java::m3::Core;
 import lang::java::m3::AST;
@@ -40,7 +40,7 @@ map[list[str], list[list[node]]] sequenceAlgorithm(
             sequences += [
                 [isType2 ? visit(seq) { 
                             case \id(_) => \id("NormalizedName")
-                            // case \type(_) => \type("")
+                            // case \type(_) => \type("NormalizedType")
 
                             /*
                             case \variable(_, x, y) => \variable("NormalizedName", x, y)
@@ -61,13 +61,13 @@ map[list[str], list[list[node]]] sequenceAlgorithm(
                     sequence[seq_start..seq_end] | 
                     seq_start <- [0..size(sequence) + 1], 
                     seq_end <- [0..size(sequence) + 1], 
-                    checkThresholdForSequence(minSequenceLength, maxSequenceLength, size(sequence[seq_start..seq_end])), 
-                    seq_end >= seq_start + minSequenceLength
+                    checkThresholdForSequence(minSequenceLength, maxSequenceLength, size(sequence[seq_start..seq_end])),
+                    minSequenceLength <= seq_end - seq_start
                 };
 
                 // for each valid subsequence, compute the hash and store it in the hash map 
                 for(subsequence <- uniqueSubsequences) {
-                    list[str] hashList = [hash(subseq) | subseq <- subsequence]; // generate a list of hashes for all elements in the subsequence 
+                    list[str] hashList = [hash(subseqNode) | subseqNode <- subsequence]; // generate a list of hashes for all elements in the subsequence 
                     // update the hashMap: add the subsequence to the map, or append it to existing entries if the hash already exists 
                     hashMap += (hashList : (hashList in hashMap ? hashMap[hashList] : []) + [subsequence]); 
                 }
@@ -88,7 +88,7 @@ str hash (value sequence) {
 
 // subsumption
 // remove subsumed clone pairs to retain only the maximal clone pairs 
-set[tuple[list[str], tuple[list[node],list[node]]]] subsumption (
+set[tuple[list[str], tuple[list[node], list[node]]]] removeSubsumedClones (
     set[tuple[list[str], tuple[list[node], list[node]]]] clonePairs) {
     
     // iterate through each clone pair
@@ -135,7 +135,7 @@ bool isContained(
     tuple[list[str], tuple[list[node],list[node]]] otherClonePair) {
     return 
         contains(
-            "<otherClonePair>"[1..size("<otherClonePair>")-1], 
+            "<otherClonePair[0]>"[1..size("<otherClonePair[0]>")-1], 
             "<candidateClonePair[0]>"[1..size("<candidateClonePair[0]>")-1]
             );
 }
@@ -152,30 +152,3 @@ list[value] collectFileLocations(
     } 
     return fileLocations;
 }
-
-// retrieve pairs of sequences that are clones based on hash map, it compares sequences in the hash map to identify all clone pairs 
-set[tuple[list[str], tuple[list[node],list[node]]]] getClonePairs (
-    set[tuple[list[str], tuple[list[node],list[node]]]] detectedClonePairs,
-    map[list[str], list[list[node]]] sequenceHashMap) {
-    
-    for (sequenceHash <- sequenceHashMap) {
-        // retrieve sequences with the same hash 
-        list[list[node]] sequences = sequenceHashMap[sequenceHash];
-        // only consider hashes with multiple sequences 
-        if (size(sequences) <= 1) {
-            continue;
-        }
-            
-        for (seq1 <- sequences) {
-            for (seq2 <- sequences) { 
-                if(seq1 != seq2) { 
-                    if( <sequenceHash, <(seq1),(seq2)>> notin detectedClonePairs) {
-                        detectedClonePairs += <sequenceHash, <(seq1),(seq2)>>;
-                    }
-                }
-            }
-        }
-    }
-
-    return(detectedClonePairs);
-} 

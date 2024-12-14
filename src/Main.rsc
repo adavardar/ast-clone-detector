@@ -1,7 +1,7 @@
 module Main
 
 import HelperFunctions;
-import Sequence;
+import SequenceAlgorithm;
 
 import lang::json::IO;
 import IO;
@@ -66,7 +66,7 @@ map[str, value] cloneDetection(loc folder, str baseName, bool isType1, map[str, 
     }
 
     // Sequence algorithm: Return all clone pairs and subsumination after performing the sequence algorithm.
-    set[tuple[list[str], tuple[list[node],list[node]]]] clonePairs = subsumption(getClonePairs({}, hashMap));
+    set[tuple[list[str], tuple[list[node],list[node]]]] clonePairs = removeSubsumedClones(getClonePairs({}, hashMap));
 
     // Sequence algorithm: Retrieve clone classes.
     set[list[str]] cloneClasses = getCloneClasses(clonePairs);
