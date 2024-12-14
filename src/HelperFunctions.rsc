@@ -254,27 +254,20 @@ map[str, set[int]] processCloneClassesData(list[map[str, str]] cloneClassesData,
 map[str, value] processCloneExamples(list[map[str, str]] allData, map[str, value] fileData) {
     int cloneExampleCount = size(allData);
     int maxCloneExamples = 5;
-    
-    if (cloneExampleCount > 0 && cloneExampleCount <= maxCloneExamples) {
-        list[map[str, str]] cloneExamples = [];
-        for (int i <- [0 .. cloneExampleCount]) {
+    list[map[str, str]] cloneExamples = [];
+
+    // select up to maxCloneExamples from allData
+    for (int i <- [0 .. maxCloneExamples]) {
+        if (i < cloneExampleCount) {
             cloneExamples += allData[i];
         }
-        fileData += ("cloneExamples": cloneExamples);
-        largestCloneClassesByMember = getLargeCloneClassMember(allData);
-        fileData += ("largestCloneClassesByMember": largestCloneClassesByMember);
-    } else if(cloneExampleCount > 0 && cloneExampleCount > maxCloneExamples) {
-            list[map[str, str]] cloneExamples = [];
-            for (int i <- [0 .. maxCloneExamples]) {
-                cloneExamples += allData[i];
-            }
-            fileData += ("cloneExamples": cloneExamples);
-            largestCloneClassesByMember = getLargeCloneClassMember(allData);
-            fileData += ("largestCloneClassesByMember": largestCloneClassesByMember);
-    } else {
-        fileData += ("cloneExamples": []);
-        fileData += ("largestCloneClassesByMember": []);
     }
+
+    // add clone examples to fileData
+    fileData += ("cloneExamples": cloneExamples);
+
+    // add the largest clone classes by member to fileData
+    fileData += ("largestCloneClassesByMember": getLargeCloneClassMember(allData));
 
     return fileData;
 }
