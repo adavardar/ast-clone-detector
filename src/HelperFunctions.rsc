@@ -274,21 +274,20 @@ set[tuple[list[str], tuple[list[node],list[node]]]] getClonePairs (
 
 
 // Return all clone classes from clone pairs
-// Return all clone classes from clone pairs
-set[list[str]] getCloneClasses(set[tuple[list[str], tuple[list[node], list[node]]]] clonepairs) {
-    set[list[str]] cloneClasses = {}; // Use a set directly to avoid duplicate handling later
+set[list[str]] getCloneClasses(set[tuple[list[str], tuple[list[node], list[node]]]] clonePairs) {
+    set[list[str]] cloneClassesSet = {};
 
-    for (pair <- clonepairs) {
-        // Extract the first and second clone groups from the pair
-        list[str] class1 = ["<(c@src)>" | c <- pair[1][0]];
-        list[str] class2 = ["<(c@src)>" | c <- pair[1][1]];
+    for (clonePair <- clonePairs) {
+        // extract the first and second clone groups from the pair
+        list[str] firstGroup = ["<(clone.src)>" | clone <- clonePair[1][0]];
+        list[str] secondGroup = ["<(clone.src)>" | clone <- clonePair[1][1]];
 
-        // Add both clone groups to the result set
-        cloneClasses += class1;
-        cloneClasses += class2;
+        // add both clone groups to the result set
+        cloneClassesSet += firstGroup;
+        cloneClassesSet += secondGroup;
     }
 
-    return cloneClasses;
+    return cloneClassesSet;
 }
 
 
