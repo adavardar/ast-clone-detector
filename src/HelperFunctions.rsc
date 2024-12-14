@@ -10,15 +10,7 @@ import List;
 import lang::json::IO;
 import Map;
 
-
-// Set boundaries for the sequence
-
-// // Reused method from series 1: This method will return the number of effective lines(LOC).
-// this function counts the non-comment, non-empty lines in a file. 
-// it reads the file, removes block comments, and counts the valid lines. 
-
-//int countNonCommentNonEmptyLines(loc filePath) 
-int countEffectiveLines(loc filePath) {
+int countNonCommentNonEmptyLines(loc filePath) {
     str fileContent = "";
 
     // read the file content and return 0 if the file cannot be read. 
@@ -93,9 +85,8 @@ str getFileName(str locationString) {
     return locationString[startIndex + 3..endIndex];
 }
 
-// this function computes the total number of non-comment, non-empty lines in all java files and returns the total number of lines and the number of lines of a specific file.
+// this function computes the total number of non-comment, non-empty lines in all java files and returns the total number of lines and the number of lines of specific files
 tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
-//int getFileLines(loc projectPath) {
     int totalLineCount = 0; 
     map[str, int] fileLineCounts = (); 
     M3 model = createM3FromDirectory(projectPath);  
@@ -103,7 +94,7 @@ tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
     // iterate through the files in the project model.  
     for (<loc file, _> <- model.containment) {
         if (endsWith(file.path, ".java")) {
-            totalLineCount += countEffectiveLines(file); 
+            totalLineCount += countNonCommentNonEmptyLines(file); 
             fileLineCounts += (getFileName("<projectPath>"): totalLineCount);
         }
     }
@@ -111,10 +102,8 @@ tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
     return <fileLineCounts, totalLineCount>;
 }
 
-// Get the largest clone class by members: cant understand fully
+// get the biggest clone class in members
 set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
-    //println("Clone Data");
-    //println(cloneData);
     int maxFileCount = 0;
     map[str, int] cloneCount = ();
     set[str] maxCloneClassMembers = {};
@@ -122,15 +111,14 @@ set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
     // count occurrences of each clone in the clone data
     for (clone <- cloneData) {
         // extract the target file name and current file name from the clone data
-        str targetFileName = clone["targetFile"];
-        str currentFileName = clone["currentFile"];
+        str Pair2Name = clone["Pair2"];
+        str Pair1Name = clone["Pair1"];
 
         // update the count for the target and current file
-        cloneCount[targetFileName] = (targetFileName in cloneCount) ? cloneCount[targetFileName] + 1 : 1;
-        cloneCount[currentFileName] = (currentFileName in cloneCount) ? cloneCount[currentFileName] + 1 : 1;
+        cloneCount[Pair2Name] = (Pair2Name in cloneCount) ? cloneCount[Pair2Name] + 1 : 1;
+        cloneCount[Pair1Name] = (Pair1Name in cloneCount) ? cloneCount[Pair1Name] + 1 : 1;
     }
-    //println("Clone Count");
-    //println(cloneCount);
+
     // find the clone class members with the maximum count
     for (clone <- cloneCount) {
         if (cloneCount[clone] == maxFileCount) {
@@ -140,85 +128,85 @@ set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
             maxFileCount = cloneCount[clone];
         } 
     }
-    //println(maxCloneClassMembers);
+
     // return the set of clones with the maximum count
     return maxCloneClassMembers;
 }
 
-
-
-// Retrieve data file data from the file system, which includes the following:
-// - Total number of lines
-// - Total number of duplicated lines
-// - Total number of lines of a specific file
-// - Total number of duplicated lines of a specific file
-// - Total number of clones
-// - Duplicated clones
-// - Largest clone class within the file system
-// - Duplication percentage in lines
-// - Largest clone class in members
-// - Clone examples
-map[str, value] getFileData(list[map[str, str]] cloneClassesData, tuple[map[str, int], int] lines, bool type2, list[map[str, str]] allData) {
-    map[str, value] fileData = ();
-    map[str, set[int]] fileDuplicatedLOC = ();
-    map[str,int] fileDuplicatedLOC2 = ();
+// Function to process and gather statistics on clone data
+map[str, value] getFileData(list[map[str, str]] cloneClasses, tuple[map[str, int], int] fileLines, bool isType2, list[map[str, str]] cloneExamples) {
+    // Initialize a map to store clone data and related maps
+    map[str, value] cloneStatistics = ();
+    map[str, set[int]] fileCloneLocations = ();
+    map[str, int] fileCloneLineCounts = ();
     
-    real totalDuplicated = 0.0;
-    int totalLines = lines[1];
-    int numberOfClonesClasses = size(cloneClassesData) - 1;
+    // Variable to store the total number of duplicated lines
+    real totalDuplicatedLines = 0.0;
 
-    // Process clone classes data
-    for (clone <- cloneClassesData) {
-        if ("largestCloneClasses" in clone) {
-            fileData["largestCloneClassesByLines"] = clone["largestCloneClasses"];
-            continue;
+    // The total number of lines in the file
+    int totalFileLines = fileLines[1];
+
+    // Subtract one from the total size of cloneClasses to exclude the "largestCloneClasses" entry
+    int totalCloneClasses = size(cloneClasses) - 1;
+
+    // Process cloneClasses to get the locations of cloned code lines
+    fileCloneLocations = processCloneClassesData(cloneClasses, fileCloneLocations);
+
+    // Get the count of duplicated lines by examining the size of fileCloneLocations
+    int duplicatedLinesCount = size(fileCloneLocations);
+
+    // Loop through the clone classes and handle the special case for "largestCloneClasses"
+    for (cloneClass <- cloneClasses) {
+        // If the current clone class contains a "largestCloneClasses" entry, store it in cloneStatistics
+        if ("largestCloneClasses" in cloneClass) {
+            cloneStatistics["BiggestCloneInLines"] = cloneClass["largestCloneClasses"];
+            continue;  // Skip further processing for this entry
         }
     }
 
-    fileDuplicatedLOC = processCloneClassesData(cloneClassesData, fileDuplicatedLOC, fileData);
-    int duplicatedLinesCount = size(fileDuplicatedLOC);
-
-    // Calculate total duplicated lines and prepare fileDuplicatedLOC2
-    for(f <- fileDuplicatedLOC) {
-        fileDuplicatedLOC2 += (f: size(fileDuplicatedLOC[f]));
-        totalDuplicated+= size(fileDuplicatedLOC[f]);
+    // Calculate total duplicated lines and populate fileCloneLineCounts with the size of each entry in fileCloneLocations
+    for (file <- fileCloneLocations) {
+        fileCloneLineCounts += (file: size(fileCloneLocations[file]));  // Add the size of each cloned line set to fileCloneLineCounts
+        totalDuplicatedLines += size(fileCloneLocations[file]);  // Accumulate the total number of duplicated lines
     }
 
-    // Calculate duplication percentage
-    real duplicationPercentage = (totalDuplicated / totalLines) * 100;
+    // Calculate the percentage of duplicated lines relative to the total lines in the file
+    real duplicationPercentage = (totalDuplicatedLines / totalFileLines) * 100;
 
-    // Populate fileData with various metrics and statistics
-    fileData += ("numberOfClonesClasses": numberOfClonesClasses);
-    fileData += ("numberOfClones": duplicatedLinesCount);
-    fileData += ("duplicatedLines": fileDuplicatedLOC2);
-    fileData += ("totalDuplicated": totalDuplicated);
-    fileData += ("duplicationPercentage": "<duplicationPercentage>%");
-    fileData += ("fileSize": lines[0]);
-    fileData += ("totalSize": lines[1]);
+    // Populate the cloneStatistics map with various statistics
+    cloneStatistics += ("*totalFileLineCount": totalFileLines);  // Total size (number of lines)
+    cloneStatistics += ("*fileSpecificLineCount": fileLines[0]);  // Number of lines in the file
+    cloneStatistics += ("*totalCloneClasses": totalCloneClasses);    // Total number of clone classes
+    cloneStatistics += ("*totalDuplicatedLines": duplicatedLinesCount);  // Total number of duplicate lines
+    cloneStatistics += ("*totalDuplicatedLinesCount": totalDuplicatedLines);  // Total count of duplicated lines
+    cloneStatistics += ("PercentageOfDuplicatedLines": "<duplicationPercentage>%");  // Duplication percentage
+    cloneStatistics += ("*duplicatedLineCounts": fileCloneLineCounts);  // Map of duplicated lines per file
 
-    // Process clone examples
-    fileData = processCloneExamples(allData, fileData);
+    // Process clone examples (adds more data to cloneStatistics)
+    cloneStatistics = processCloneExamples(cloneExamples, cloneStatistics);
 
-    return type2 ? ("type2": fileData) : ("type1": fileData);
+    // Return the result based on the isType2 flag (either 'type2' or 'type1' as the key)
+    return isType2 ? ("type2": cloneStatistics) : ("type1": cloneStatistics);
 }
 
-map[str, set[int]] processCloneClassesData(list[map[str, str]] cloneClassesData, map[str, set[int]] fileDuplicatedLOC, map[str, value] fileData) {
+
+map[str, set[int]] processCloneClassesData(list[map[str, str]] cloneClassesData, map[str, set[int]] fileDuplicatedLOC) {
     for (clone <- cloneClassesData) {
         if ("largestCloneClasses" in clone) continue;
-        // Find the index of the left and right brackets
+        // find the index of the left and right brackets
         str fileNameFull = clone["fileName"];
         int leftIndex = findFirst(fileNameFull, "(");
         int rightIndex = findFirst(fileNameFull, ")");
 
-        // For the JSON, remove the location part of the string to get the file name
+        // for the JSON, remove the location part of the string to get the file name
         str fileName = fileNameFull[0 .. leftIndex];
-        // Extract the file location from the string
+        // extract the file location from the string
         str fileLocation = fileNameFull[leftIndex + 1 .. rightIndex];
 
-        // split the fileLocation string by "," and convert it to a list of integers
+        // split the fileLocation string by "," and convert it to a list of integers of indices
         list[int] splits = [toInt(s) | s <- split(",", fileLocation)];
 
-        // generate the line numbers list 
+        // generate the line numbers list for indices
         list[int] lineNumbersList = [splits[0] .. splits[1] + 1];
 
         // convert the list of line numbers into a set
@@ -247,10 +235,10 @@ map[str, value] processCloneExamples(list[map[str, str]] allData, map[str, value
     }
 
     // add clone examples to fileData
-    fileData += ("cloneExamples": cloneExamples);
+    fileData += ("ExampleClones": cloneExamples);
 
     // add the largest clone classes by member to fileData
-    fileData += ("largestCloneClassesByMember": getLargeCloneClassMember(allData));
+    fileData += ("BiggestCloneClassInMembers": getLargeCloneClassMember(allData));
 
     return fileData;
 }
@@ -386,10 +374,10 @@ for(c <- clonepairs) {
 
         // Print results to a json
         map[str,str] clonePairData = ();
-        clonePairData +=("currentFile":("<fileName1>(<lineNumbers1[0]>,<lineNumbers1[size(lineNumbers1)-1]>)"));
-        clonePairData +=("targetFile":("<fileName2>(<lineNumbers2[0]>,<lineNumbers2[size(lineNumbers2)-1]>)"));
-        clonePairData +=("sourceCode":"<sourceCode>");
-        clonePairData +=("size":"<size(lineNumbers1)>");
+        clonePairData +=("NumberOfLines":"<size(lineNumbers1)>");
+        clonePairData +=("Pair1":("<fileName1>(<lineNumbers1[0]>,<lineNumbers1[size(lineNumbers1)-1]>)"));
+        clonePairData +=("Pair2":("<fileName2>(<lineNumbers2[0]>,<lineNumbers2[size(lineNumbers2)-1]>)"));
+        clonePairData +=("SourceCode":"<sourceCode>");
         clonePairsData += clonePairData;
     }
 
