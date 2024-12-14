@@ -125,44 +125,35 @@ str removeLoc (str s) {
 }
 
 
-// Get the largest clone class by members
-set[str] getLargeCloneClassMember (list[map[str,str]] allData) {
-    map[str, int] count = ();
-    for(c <- allData) {
-        str c1 = "<c["targetFile"]>";
-        str c2 = "<c["currentFile"]>";
-
-        if(c1 in count) {
-           count += (c1 : count[c1] + 1);
-        }
-        else {
-           count += (c1 : 0);
-        }
-        if(c2 in count) {
-           count += (c2 : count[c2] + 1);
-        }
-        else {
-           count += (c2 : 0);
-        }
-    }
+set[str] getLargeCloneClassMember(list[map[str, str]] cloneData) {
+    int maxFileCount = 0;
     
-    int max = 0;
-    set[str] maxString = {};
+    map[str, int] cloneCount = ();
+    set[str] largestCloneFiles = {};
 
-    for(c <- count) {
-        if(count[c] > max) {
-            max = count[c];
-            maxString = {c};
-        }
-        if(count[c] == max) {
-            maxString += c;
+    //count occurrences of each clone in the clone data
+    for (clone <- cloneData) {
+        // extract the target file name and current file name from the clone data
+        str targetFileName = clone["targetFile"];
+        str currentFileName = clone["currentFile"];
 
-        }
+        // update the count for the target and current file
+        cloneCount[targetFileName] = (targetFileName in cloneCount) ? cloneCount[targetFileName] + 1 : 1;
+        cloneCount[currentFileName] = (currentFileName in cloneCount) ? cloneCount[currentFileName] + 1 : 1;
+    }
+    // find the clones with the maximum count
+    for (clone <- cloneCount) {
+        if (cloneCount[clone] == maxFileCount) {
+            largestCloneFiles += clone;
+        } else if (cloneCount[clone] > maxFileCount) {
+            maxFileCount = cloneCount[clone];
+            largestCloneFiles = {clone};
+        } 
     }
 
-
-    return maxString;    
-
+    //println(cloneCount);
+    // return the set of clones with the maximum count
+    return largestCloneFiles;
 }
 
 // Retrieve data file data from the file system, which includes the following:
