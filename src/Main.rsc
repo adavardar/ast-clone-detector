@@ -3,22 +3,23 @@ module Main
 import HelperFunctions;
 import SequenceAlgorithm;
 
-import lang::json::IO;
-import IO;
-import Type;
-import List;
-import Set;
-import String;
 import lang::java::m3::Core;
 import lang::java::m3::AST;
+import lang::json::IO;
+
+import IO;
+import String;
+import List;
+import Map;
 import Node;
+import Set;
+import Type;
 
 int MIN_CLONE_SIZE = 6;
-int MAX_CLONE_SIZE = 12;
+int MAX_CLONE_SIZE = 50;
 
 int TEST_MIN_CLONE_SIZE = 1;
 int TEST_MAX_CLONE_SIZE = 10;
-
 
 str main () {
 
@@ -28,24 +29,22 @@ str main () {
     processFolder("Test2", |cwd:///Tests/CodeClones2/|, true);
     processFolder("Test3", |cwd:///Tests/CodeClones3/|, true);
 
-    //processFolder("smallsql", |cwd:///smallsql0.21_src|, false);
-    //processFolder("hsqldb", |cwd:///hsqldb-2.3.1|, false);
+    processFolder("smallsql", |cwd:///smallsql0.21_src|, false);
+    processFolder("hsqldb", |cwd:///hsqldb-2.3.1|, false);
 
     return "Detection is done!";
 }
 
 void processFolder(str baseName, loc folder, bool isTest) {
-    map[str,value] cloningData = ();
-    //println(cloningData);
     println("Processing the <baseName> folder...");
-    
+
+    map[str,value] cloningData = ();
+
     // Type1 clones
     cloningData = cloneDetection(folder, "<baseName>-Type1", false, cloningData, isTest);
-    //println(cloningData);
 
     // Type1 + Type2 clones
     cloningData = cloneDetection(folder, "<baseName>-Type1&2", true, cloningData, isTest);
-    //println(cloningData);
 
     println("");
 }

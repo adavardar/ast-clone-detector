@@ -2,13 +2,14 @@ module HelperFunctions
 
 import lang::java::m3::Core;
 import lang::java::m3::AST;
+import lang::json::IO;
+
 import IO;
-import Node;
-import Set;
 import String;
 import List;
-import lang::json::IO;
 import Map;
+import Node;
+import Set;
 
 int countNonCommentNonEmptyLines(loc filePath) {
     str fileContent = "";
