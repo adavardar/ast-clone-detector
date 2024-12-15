@@ -12,7 +12,7 @@ import Node;
 import Set;
 
 // retrieve pairs of sequences that are clones based on hash map, it compares sequences in the hash map to identify all clone pairs 
-set[tuple[list[str], tuple[list[node],list[node]]]] getClonePairs (
+set[tuple[list[str], tuple[list[node],list[node]]]] extractClonePairs (
     set[tuple[list[str], tuple[list[node],list[node]]]] detectedClonePairs,
     map[list[str], list[list[node]]] sequenceHashMap) {
     
@@ -40,7 +40,7 @@ set[tuple[list[str], tuple[list[node],list[node]]]] getClonePairs (
 
 
 // Return all clone classes from clone pairs
-set[list[str]] getCloneClasses(set[tuple[list[str], tuple[list[node], list[node]]]] clonePairs) {
+set[list[str]] classifyCloneGroups(set[tuple[list[str], tuple[list[node], list[node]]]] clonePairs) {
     set[list[str]] classSet = {};
 
     for (clonePair <- clonePairs) {
@@ -58,7 +58,7 @@ set[list[str]] getCloneClasses(set[tuple[list[str], tuple[list[node], list[node]
 
 
 // prepare clone class data for JSON output
-list[map[str, str]] cloneClassToFile(list[map[str, str]] cloneClassesData, set[list[str]] cloneClasses) {
+list[map[str, str]] convertCloneClassesToStructuredData(list[map[str, str]] cloneClassesData, set[list[str]] cloneClasses) {
     list[str] nameOfBiggestCloneClass = [];
     map[str, int] cloneClassLineCountMap = ();
 
@@ -107,7 +107,7 @@ list[map[str, str]] cloneClassToFile(list[map[str, str]] cloneClassesData, set[l
 }
 
 
-list[map[str,str]] clonePairsToFile(list[map[str,str]] infoClone, set[tuple[list[str], tuple[list[node],list[node]]]] ClonePairs) {
+list[map[str,str]] convertClonePairsToStructuredData(list[map[str,str]] infoClone, set[tuple[list[str], tuple[list[node],list[node]]]] ClonePairs) {
     // process each clone pair
     for (pair <- ClonePairs) {
         // process clone file 1
@@ -179,7 +179,6 @@ tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
     }
     return <fileLineCounts, totalLineCount>;
 }
-
 
 // this function counts the number of non-comment, non-empty lines in a file
 int countNonCommentNonEmptyLines(loc filePath) {
@@ -286,19 +285,34 @@ tuple[set[str], int] findBiggestCloneClassMember(list[map[str, str]] cloneData) 
     // return the set of clones with the maximum count and their count
     return <maxCloneClassMembers, maxFileCount>;
 }
+// calculate the percentage of duplicated lines for each file
+map[str,real] calculateFilePercentage(map[str, int] countLine, map[str, int] duplicateLine) {
+    map[str,real] result = ();
 
-// gunction to process and gather statistics on clone data
-map[str, value] findCloneStatistics(list[map[str, str]] clonePairs, list[map[str, str]] cloneClasses, tuple[map[str, int], int] fileLines, bool isType2) {
+    // iterate over each file in countLine
+    for (str key <- countLine) {
+        int totalLine = countLine[key]; // get the total line count for the file
+        real dupLine = duplicateLine[key] * 1.0; // get the duplicated line count for the file and convert to real
+        real percent = (dupLine / totalLine) * 100.0; // calculate the percentage of duplicated lines
+        result[key] = percent; // store the result in the map
+    }
+
+    return result;
+}
+
+// function to process and gather statistics on clone data
+map[str,value] findCloneStatistics(list[map[str,str]] clonePairs, list[map[str,str]] cloneClasses, tuple[map[str,int], int] fileLines, bool isType2) {
     // initialize a map to store clone data and related maps
-    map[str, value] cloneStatistics = ();
-    map[str, set[int]] fileCloneLocations = ();
-    map[str, int] fileCloneLineCounts = ();
+    map[str,value] cloneStatistics = ();
+    map[str,set[int]] fileCloneLocations = ();
+    map[str,int] fileCloneLineCounts = ();
     
     // variable to store the total number of duplicated lines
     real totalDuplicatedLines = 0.0;
 
-    // the total number of lines in the folder
+    // the total number of lines in the folder and LOC for each file
     int totalLineCount = fileLines[1];
+    map[str,int] lineCountPerFile = fileLines[0];
 
     // subtract two from the total size of cloneClasses to exclude the "BiggestCloneClassInLines" entry and the "sizeOfBiggestCloneClass" entry
     int totalCloneClasses = size(cloneClasses) - 2;
@@ -329,14 +343,17 @@ map[str, value] findCloneStatistics(list[map[str, str]] clonePairs, list[map[str
     // calculate the percentage of duplicated lines
     real duplicationPercentage = (totalDuplicatedLines / totalLineCount) * 100;
 
+    map[str,real] duplicationPercentagePerFile = calculateFilePercentage(lineCountPerFile, fileCloneLineCounts);
+
     // fill the cloneStatistics map with various statistics
     cloneStatistics += ("TotalLineCountOfFolder": totalLineCount); 
-    cloneStatistics += ("LineCountOfFiles": fileLines[0]);
+    cloneStatistics += ("LineCountOfFiles": lineCountPerFile);
     cloneStatistics += ("NumberOfClonesClasses": totalCloneClasses); 
     cloneStatistics += ("NumberOfFilesWithDuplicatedCode": duplicatedLinesCount);
     cloneStatistics += ("TotalNumberOfClonePairs": totalDuplicatedLines);  
     cloneStatistics += ("PercentageOfDuplicatedLines": "<duplicationPercentage>%");
     cloneStatistics += ("NumberOfDuplicatedLinesPerFile": fileCloneLineCounts);
+    cloneStatistics += ("PercentageOfDuplicatedLinesPerFile": duplicationPercentagePerFile);
 
     // process clone examples and add more data to cloneStatistics
     cloneStatistics = processCloneExamples(clonePairs, cloneStatistics);

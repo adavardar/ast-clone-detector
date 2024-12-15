@@ -1,6 +1,7 @@
 {
  "Type-1": {
   "NumberOfFilesWithDuplicatedCode": 5,
+  "PercentageOfDuplicatedLinesPerFile": {},
   "LineCountOfFiles": {
    "smallsql0.21_src/src/smallsql/database/ExpressionValue.java": 564,
    "smallsql0.21_src/src/smallsql/database/ExpressionFunctionExp.java": 8,
@@ -258,6 +259,7 @@
  },
  "Type-2": {
   "NumberOfFilesWithDuplicatedCode": 6,
+  "PercentageOfDuplicatedLinesPerFile": {},
   "LineCountOfFiles": {
    "smallsql0.21_src/src/smallsql/database/ExpressionValue.java": 564,
    "smallsql0.21_src/src/smallsql/database/ExpressionFunctionExp.java": 8,

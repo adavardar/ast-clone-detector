@@ -1,6 +1,10 @@
 {
  "Type-1": {
   "NumberOfFilesWithDuplicatedCode": 2,
+  "PercentageOfDuplicatedLinesPerFile": {
+   "Tests/CodeClones3/Example2.java": 34.7826087,
+   "Tests/CodeClones3/Example1.java": 34.7826087
+  },
   "LineCountOfFiles": {
    "Tests/CodeClones3/Example2.java": 23,
    "Tests/CodeClones3/Example1.java": 23

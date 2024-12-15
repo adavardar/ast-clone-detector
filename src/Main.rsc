@@ -29,7 +29,7 @@ str main () {
     processFolder("Test2", |cwd:///Tests/CodeClones2/|, true);
     processFolder("Test3", |cwd:///Tests/CodeClones3/|, true);
 
-    processFolder("smallsql", |cwd:///smallsql0.21_src|, false);
+    //processFolder("smallsql", |cwd:///smallsql0.21_src|, false);
     //processFolder("hsqldb", |cwd:///hsqldb-2.3.1|, false);
 
     return "Detection is done!";
@@ -49,39 +49,52 @@ void processFolder(str baseName, loc folder, bool isTest) {
     println("");
 }
 
+/**
+ * Detects code clones in the specified folder and generates cloning data.
+ *
+ * @param folder The location of the folder to analyze for code clones.
+ * @param baseName The base name used for output files.
+ * @param isType1 A boolean indicating whether to detect Type-1 clones.
+ * @param cloningData A map to store the cloning data.
+ * @param isTest A boolean indicating whether this is a test run.
+ * @return A map containing the updated cloning data.
+ *
+ * The function performs the following steps:
+ * 1. Computes the total number of non-comment, non-empty lines in the files within the folder.
+ * 2. Initializes an empty hashMap to store sequences of code.
+ * 3. Depending on the isTest flag, it runs the sequence algorithm.
+ * 4. Retrieves clone pairs and removes subsumed clones.
+ * 5. Extracts clone classes from the clone pairs.
+ * 6. Prints the number of clone classes detected.
+ * 7. Converts clone pairs and clone classes to file data.
+ * 8. Updates the cloningData map with clone statistics.
+ * 9. Writes the cloning data to a JSON file in the Results folder.
+ */
+ 
 map[str, value] cloneDetection(loc folder, str baseName, bool isType1, map[str, value] cloningData, bool isTest) {
 
-    // Get number of lines of the whole folder system and a specific folder. 
     tuple[map[str,int], int] fileLines = computeTotalNonCommentNonEmptyLines(folder);
 
-    // Hashmap to keep track of all clones.
-    map[list[str], list[list[node]]] hashMap = ();
+    map[list[str], list[list[node]]] cloneHashMap = ();
 
-    // Sequence algorithm: Return all subsequences.
     if (isTest) {
-        hashMap = sequenceAlgorithm(hashMap, TEST_MIN_CLONE_SIZE, TEST_MAX_CLONE_SIZE, folder, isType1);
+        cloneHashMap = sequenceAlgorithm(cloneHashMap, TEST_MIN_CLONE_SIZE, TEST_MAX_CLONE_SIZE, folder, isType1);
     } else {
-        hashMap = sequenceAlgorithm(hashMap, MIN_CLONE_SIZE, MAX_CLONE_SIZE, folder, isType1);
+        cloneHashMap = sequenceAlgorithm(cloneHashMap, MIN_CLONE_SIZE, MAX_CLONE_SIZE, folder, isType1);
     }
 
-    // Sequence algorithm: Return all clone pairs and subsumination after performing the sequence algorithm.
-    set[tuple[list[str], tuple[list[node],list[node]]]] clonePairs = removeSubsumedClones(getClonePairs({}, hashMap));
+    set[tuple[list[str], tuple[list[node],list[node]]]] clonePairs = removeSubsumedClones(extractClonePairs({}, cloneHashMap));
 
-    // Sequence algorithm: Retrieve clone classes.
-    set[list[str]] cloneClasses = getCloneClasses(clonePairs);
+    set[list[str]] cloneClasses = classifyCloneGroups(clonePairs);
 
-    // Number of clone classes
-    println("<baseName>: Number of clone classes (Sequence): <size(cloneClasses)>");
+    //println("<baseName>: Number of clone classes (Sequence): <size(cloneClasses)>");
 
-    // Sequence algorithm: Get folder data ready. 
-    list[map[str,str]] dataClonePair = clonePairsToFile([], clonePairs);
+    list[map[str,str]] dataClonePair = convertClonePairsToStructuredData([], clonePairs);
 
-    list[map[str,str]] dataCloneClass = cloneClassToFile([], cloneClasses);
+    list[map[str,str]] dataCloneClass = convertCloneClassesToStructuredData([], cloneClasses);
 
-    // Get specific folder data.
     cloningData += findCloneStatistics(dataClonePair, dataCloneClass, fileLines, isType1);
 
-    // Write sequence data to a json folder.
     writeJSON(|cwd:///Results/<baseName>/cloning_data_<baseName>.txt|, cloningData, indent=1);
 
 
