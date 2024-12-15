@@ -1,56 +1,62 @@
 {
- "Type-1": {
-  "NumberOfFilesWithDuplicatedCode": 2,
-  "PercentageOfDuplicatedLinesPerFile": {
-   "Tests/CodeClones3/Example2.java": 34.7826087,
-   "Tests/CodeClones3/Example1.java": 34.7826087
-  },
-  "LineCountOfFiles": {
-   "Tests/CodeClones3/Example2.java": 23,
-   "Tests/CodeClones3/Example1.java": 23
-  },
-  "BiggestCloneClassLineSize": "6",
-  "NumberOfClonesClasses": 4,
-  "NumberOfDuplicatedLinesPerFile": {
-   "Tests/CodeClones3/Example2.java": 8,
-   "Tests/CodeClones3/Example1.java": 8
-  },
-  "PercentageOfDuplicatedLines": "34.7826087000%",
-  "BiggestCloneClassInMembers": [
-   "Tests/CodeClones3/Example2.java(7,12)",
-   "Tests/CodeClones3/Example1.java(7,12)",
-   "Tests/CodeClones3/Example1.java(26,27)",
-   "Tests/CodeClones3/Example2.java(26,27)"
-  ],
-  "BiggestCloneClassMemberCount": 2,
-  "TotalLineCountOfFolder": 46,
-  "ExampleClones": [
-   {
-    "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
-    "Pair1": "Tests/CodeClones3/Example2.java(7,12)",
-    "Pair2": "Tests/CodeClones3/Example1.java(7,12)",
-    "NumberOfLines": "6"
+ "children": [
+  {
+   "value": {
+    "NumberOfFilesWithDuplicatedCode": 2,
+    "PercentageOfDuplicatedLinesPerFile": {
+     "Tests/CodeClones3/Example2.java": 34.7826087,
+     "Tests/CodeClones3/Example1.java": 34.7826087
+    },
+    "LineCountOfFiles": {
+     "Tests/CodeClones3/Example2.java": 23,
+     "Tests/CodeClones3/Example1.java": 23
+    },
+    "BiggestCloneClassLineSize": "6",
+    "NumberOfClonesClasses": 4,
+    "NumberOfDuplicatedLinesPerFile": {
+     "Tests/CodeClones3/Example2.java": 8,
+     "Tests/CodeClones3/Example1.java": 8
+    },
+    "PercentageOfDuplicatedLines": "34.7826087000%",
+    "BiggestCloneClassInMembers": [
+     "Tests/CodeClones3/Example2.java(7,12)",
+     "Tests/CodeClones3/Example1.java(7,12)",
+     "Tests/CodeClones3/Example1.java(26,27)",
+     "Tests/CodeClones3/Example2.java(26,27)"
+    ],
+    "BiggestCloneClassMemberCount": 2,
+    "TotalLineCountOfFolder": 46,
+    "ExampleClones": [
+     {
+      "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
+      "Pair1": "Tests/CodeClones3/Example2.java(7,12)",
+      "Pair2": "Tests/CodeClones3/Example1.java(7,12)",
+      "NumberOfLines": "6"
+     },
+     {
+      "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
+      "Pair1": "Tests/CodeClones3/Example1.java(7,12)",
+      "Pair2": "Tests/CodeClones3/Example2.java(7,12)",
+      "NumberOfLines": "6"
+     },
+     {
+      "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"function1\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"function2\\\"),[]))\"]",
+      "Pair1": "Tests/CodeClones3/Example2.java(26,27)",
+      "Pair2": "Tests/CodeClones3/Example1.java(26,27)",
+      "NumberOfLines": "2"
+     },
+     {
+      "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"function1\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"function2\\\"),[]))\"]",
+      "Pair1": "Tests/CodeClones3/Example1.java(26,27)",
+      "Pair2": "Tests/CodeClones3/Example2.java(26,27)",
+      "NumberOfLines": "2"
+     }
+    ],
+    "TotalNumberOfClonePairs": 16.0,
+    "BiggestCloneClassInLines": "[\"Tests/CodeClones3/Example2.java(7,12)\",\"Tests/CodeClones3/Example1.java(7,12)\"]"
    },
-   {
-    "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
-    "Pair1": "Tests/CodeClones3/Example1.java(7,12)",
-    "Pair2": "Tests/CodeClones3/Example2.java(7,12)",
-    "NumberOfLines": "6"
-   },
-   {
-    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"function1\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"function2\\\"),[]))\"]",
-    "Pair1": "Tests/CodeClones3/Example2.java(26,27)",
-    "Pair2": "Tests/CodeClones3/Example1.java(26,27)",
-    "NumberOfLines": "2"
-   },
-   {
-    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"function1\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"function2\\\"),[]))\"]",
-    "Pair1": "Tests/CodeClones3/Example1.java(26,27)",
-    "Pair2": "Tests/CodeClones3/Example2.java(26,27)",
-    "NumberOfLines": "2"
-   }
-  ],
-  "TotalNumberOfClonePairs": 16.0,
-  "BiggestCloneClassInLines": "[\"Tests/CodeClones3/Example2.java(7,12)\",\"Tests/CodeClones3/Example1.java(7,12)\"]"
- }
+   "key": "Type-1"
+  }
+ ],
+ "key": "CloneStatistics"
 }

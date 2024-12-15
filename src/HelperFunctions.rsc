@@ -362,7 +362,24 @@ map[str,value] findCloneStatistics(list[map[str,str]] clonePairs, list[map[str,s
     // return the result based on the type of clone detection
     return isType2 ? ("Type-2": cloneStatistics) : ("Type-1": cloneStatistics);
 }
+map[str, value] transformCloneStatisticsToD3Format(map[str, value] cloneStatistics) {
+    map[str, value] d3Data = ();
+    list[map[str, value]] children = [];
 
+    // transform each entry in cloneStatistics into a hierarchical format
+    for (key <- cloneStatistics) {
+        map[str, value] child = ();
+        child["name"] = key;
+        child["value"] = cloneStatistics[key];
+        children += child;
+    }
+
+    // create the root node
+    d3Data["name"] = "CloneStatistics";
+    d3Data["children"] = children;
+
+    return d3Data;
+}
 
 map[str, set[int]] processCloneClassesData(list[map[str, str]] cloneClassesData, map[str, set[int]] fileDuplicatedLOC) {
     for (clone <- cloneClassesData) {

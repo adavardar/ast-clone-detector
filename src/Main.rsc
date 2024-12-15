@@ -29,8 +29,8 @@ str main () {
     processFolder("Test2", |cwd:///Tests/CodeClones2/|, true);
     processFolder("Test3", |cwd:///Tests/CodeClones3/|, true);
 
-    processFolder("smallsql", |cwd:///smallsql0.21_src|, false);
-    processFolder("hsqldb", |cwd:///hsqldb-2.3.1|, false);
+    //processFolder("smallsql", |cwd:///smallsql0.21_src|, false);
+    //processFolder("hsqldb", |cwd:///hsqldb-2.3.1|, false);
 
     return "Detection is done!";
 }
@@ -95,7 +95,10 @@ map[str, value] cloneDetection(loc folder, str baseName, bool isType1, map[str, 
 
     cloningData += findCloneStatistics(dataClonePair, dataCloneClass, fileLines, isType1);
 
-    writeJSON(|cwd:///Results/<baseName>/cloning_data_<baseName>.txt|, cloningData, indent=1);
+    map[str, value] d3Data = transformToD3Format(cloningData);
+
+
+    writeJSON(|cwd:///Results/<baseName>/cloning_data_<baseName>.txt|, d3Data, indent=1);
 
 
     return cloningData;
