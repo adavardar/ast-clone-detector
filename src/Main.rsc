@@ -15,7 +15,7 @@ import Node;
 import Set;
 import Type;
 
-int MIN_CLONE_SIZE = 6;
+int MIN_CLONE_SIZE = 12;
 int MAX_CLONE_SIZE = 100;
 
 int TEST_MIN_CLONE_SIZE = 1;
@@ -30,7 +30,7 @@ str main () {
     processFolder("Test3", |cwd:///Tests/CodeClones3/|, true);
 
     processFolder("smallsql", |cwd:///smallsql0.21_src|, false);
-    processFolder("hsqldb", |cwd:///hsqldb-2.3.1|, false);
+    //processFolder("hsqldb", |cwd:///hsqldb-2.3.1|, false);
 
     return "Detection is done!";
 }
@@ -79,7 +79,7 @@ map[str, value] cloneDetection(loc folder, str baseName, bool isType1, map[str, 
     list[map[str,str]] dataCloneClass = cloneClassToFile([], cloneClasses);
 
     // Get specific folder data.
-    cloningData += findCloneStatistics(dataCloneClass, fileLines, isType1, dataClonePair);
+    cloningData += findCloneStatistics(dataClonePair, dataCloneClass, fileLines, isType1);
 
     // Write sequence data to a json folder.
     writeJSON(|cwd:///Results/<baseName>/cloning_data_<baseName>.txt|, cloningData, indent=1);

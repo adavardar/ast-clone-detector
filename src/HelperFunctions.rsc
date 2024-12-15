@@ -155,6 +155,32 @@ tuple[str, list[int], list[str]] collectCloneData(list[node] clones) {
     return <file, cloneLines, cloneSources>;
 }
 
+
+// this function computes the total number of non-comment, non-empty lines in all java files and returns the total number of lines and the number of lines of specific files
+tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
+    int totalLineCount = 0; 
+    map[str, int] fileLineCounts = (); 
+    M3 model = createM3FromDirectory(projectPath);  
+
+    //iterate through the files in the project model  
+    for (<loc file, _> <- model.containment) {
+        if (endsWith(file.path, ".java")) {
+            // count non-comment, non-empty lines in the file
+            int fileLineCount = countNonCommentNonEmptyLines(file);
+
+            // update total line count
+            totalLineCount += fileLineCount;
+
+            str fileName = findFileName("<file>");
+
+            // store the individual file's count in the map
+            fileLineCounts += (fileName: fileLineCount);
+        }
+    }
+    return <fileLineCounts, totalLineCount>;
+}
+
+
 // this function counts the number of non-comment, non-empty lines in a file
 int countNonCommentNonEmptyLines(loc filePath) {
     str fileContent = "";
@@ -230,23 +256,6 @@ str findFileName(str locationString) {
     return locationString[startIndex + 3..endIndex];
 }
 
-// this function computes the total number of non-comment, non-empty lines in all java files and returns the total number of lines and the number of lines of specific files
-tuple[map[str, int], int] computeTotalNonCommentNonEmptyLines(loc projectPath) {
-    int totalLineCount = 0; 
-    map[str, int] fileLineCounts = (); 
-    M3 model = createM3FromDirectory(projectPath);  
-
-    // iterate through the files in the project model.  
-    for (<loc file, _> <- model.containment) {
-        if (endsWith(file.path, ".java")) {
-            totalLineCount += countNonCommentNonEmptyLines(file); 
-            fileLineCounts += (findFileName("<projectPath>"): totalLineCount);
-        }
-    }
-
-    return <fileLineCounts, totalLineCount>;
-}
-
 // get the biggest clone class in members and its count
 tuple[set[str], int] findBiggestCloneClassMember(list[map[str, str]] cloneData) {
     int maxFileCount = 0;
@@ -279,7 +288,7 @@ tuple[set[str], int] findBiggestCloneClassMember(list[map[str, str]] cloneData) 
 }
 
 // gunction to process and gather statistics on clone data
-map[str, value] findCloneStatistics(list[map[str, str]] cloneClasses, tuple[map[str, int], int] fileLines, bool isType2, list[map[str, str]] clonePairs) {
+map[str, value] findCloneStatistics(list[map[str, str]] clonePairs, list[map[str, str]] cloneClasses, tuple[map[str, int], int] fileLines, bool isType2) {
     // initialize a map to store clone data and related maps
     map[str, value] cloneStatistics = ();
     map[str, set[int]] fileCloneLocations = ();

@@ -2,7 +2,8 @@
  "Type-1": {
   "NumberOfFilesWithDuplicatedCode": 2,
   "LineCountOfFiles": {
-   "Tests/CodeClones2/": 42
+   "Tests/CodeClones2/Example2.java": 21,
+   "Tests/CodeClones2/Example1.java": 21
   },
   "BiggestCloneClassLineSize": "6",
   "NumberOfClonesClasses": 6,
@@ -59,7 +60,8 @@
  "Type-2": {
   "NumberOfFilesWithDuplicatedCode": 2,
   "LineCountOfFiles": {
-   "Tests/CodeClones2/": 42
+   "Tests/CodeClones2/Example2.java": 21,
+   "Tests/CodeClones2/Example1.java": 21
   },
   "BiggestCloneClassLineSize": "7",
   "NumberOfClonesClasses": 20,
