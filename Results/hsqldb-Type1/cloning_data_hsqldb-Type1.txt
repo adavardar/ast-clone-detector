@@ -1,11 +1,11 @@
 {
  "Type-1": {
-  "NumberOfFilesWithDuplicatedCode": 86,
+  "NumberOfFilesWithDuplicatedCode": 89,
   "LineCountOfFiles": {
    "hsqldb-2.3.1": 177381
   },
   "BiggestCloneClassLineSize": "45",
-  "NumberOfClonesClasses": 304,
+  "NumberOfClonesClasses": 350,
   "NumberOfDuplicatedLinesPerFile": {
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationMain.java": 334,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/jdbc/JDBCDataSource.java": 10,
@@ -36,13 +36,15 @@
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestStoredProcedure.java": 37,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/jdbc/JDBCConnection.java": 70,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/ParserDDL.java": 58,
-   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java": 481,
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java": 570,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/sample/TriggerSample.java": 18,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/server/ServerConnection.java": 51,
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestBatchExecution.java": 41,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/types/CharacterType.java": 12,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/SchemaManager.java": 41,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/ParserCommand.java": 44,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/jdbc/pool/JDBCPooledDataSource.java": 10,
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestJDBCSavepoints.java": 24,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/persist/RowStoreAVLHybridExtended.java": 10,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestDateTime.java": 70,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/map/BaseHashMap.java": 36,
@@ -71,7 +73,7 @@
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/types/BinaryType.java": 12,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestTextTables.java": 34,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/result/ResultLob.java": 28,
-   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestOdbcService.java": 14,
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestOdbcService.java": 109,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/ParserDQL.java": 55,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestBug1191815.java": 7,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/TransactionManager2PL.java": 16,
@@ -88,22 +90,26 @@
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestBug785429.java": 7,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/NumberSequence.java": 46,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/jdbc/JDBCArray.java": 18,
-   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/RangeVariable.java": 19,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/persist/LobManager.java": 106,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/util/DatabaseManagerSwing.java": 102,
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/FunctionCustom.java": 24,
-   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestMerge.java": 20
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestMerge.java": 20,
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestINPredicateParameterizationAndCorrelation.java": 46,
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/RangeVariable.java": 19
   },
-  "PercentageOfDuplicatedLines": "2.21951618300%",
+  "PercentageOfDuplicatedLines": "2.38582486300%",
   "BiggestCloneClassInMembers": [
-   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(5969,5985)",
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestCacheSize.java(790,795)",
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestCacheSize.java(929,934)",
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestCacheSize.java(708,713)",
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(4395,4412)",
-   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(2689,2705)",
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(3786,3797)",
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestCacheSize.java(878,883)",
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(5969,5985)",
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(5428,5433)",
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(5733,5738)",
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(2544,2549)",
+   "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(2689,2705)",
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(7934,7947)",
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(3442,3455)",
    "hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestCacheSize.java(748,753)",
@@ -113,37 +119,37 @@
   "TotalLineCountOfFolder": 177381,
   "ExampleClones": [
    {
-    "SourceCode": "[declarationStatement(variables([],arrayType(simpleType(id(\"Object\"))),[variable(id(\"data\"),[],methodCall([],id(\"getLobHeader\"),[methodCall(id(\"a\"),[],id(\"getId\"),[])]))])),declarationStatement(variables([],long(),[variable(id(\"aLength\"),[],methodCall(bracket(cast(simpleType(id(\"Long\")),arrayAccess(id(\"data\"),qualifiedName([id(\"LOB_IDS\"),id(\"LOB_LENGTH\")])))),[],id(\"longValue\"),[]))])),declarationStatement(variables([],arrayType(int()),[variable(id(\"aAddresses\"),[],methodCall([],id(\"getBlockAddresses\"),[methodCall(id(\"a\"),[],id(\"getId\"),[]),number(\"0\"),qualifiedName([id(\"Integer\"),id(\"MAX_VALUE\")])]))])),declarationStatement(variables([],int(),[variable(id(\"aIndex\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"bOffset\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"aOffset\"),[],number(\"0\"))]))]",
+    "SourceCode": "[\"declarationStatement(variables([],arrayType(simpleType(id(\\\"Object\\\"))),[variable(id(\\\"data\\\"),[],methodCall([],id(\\\"getLobHeader\\\"),[methodCall(id(\\\"a\\\"),[],id(\\\"getId\\\"),[])]))]))\",\"declarationStatement(variables([],long(),[variable(id(\\\"aLength\\\"),[],methodCall(bracket(cast(simpleType(id(\\\"Long\\\")),arrayAccess(id(\\\"data\\\"),qualifiedName([id(\\\"LOB_IDS\\\"),id(\\\"LOB_LENGTH\\\")])))),[],id(\\\"longValue\\\"),[]))]))\",\"declarationStatement(variables([],arrayType(int()),[variable(id(\\\"aAddresses\\\"),[],methodCall([],id(\\\"getBlockAddresses\\\"),[methodCall(id(\\\"a\\\"),[],id(\\\"getId\\\"),[]),number(\\\"0\\\"),qualifiedName([id(\\\"Integer\\\"),id(\\\"MAX_VALUE\\\")])]))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"aIndex\\\"),[],number(\\\"0\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"bOffset\\\"),[],number(\\\"0\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"aOffset\\\"),[],number(\\\"0\\\"))]))\"]",
     "Pair1": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/persist/LobManager.java(695,701)",
     "Pair2": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/persist/LobManager.java(790,796)",
     "NumberOfLines": "6"
    },
    {
-    "SourceCode": "[declarationStatement(variables([],arrayType(simpleType(id(\"Object\"))),[variable(id(\"data\"),[],methodCall([],id(\"getLobHeader\"),[methodCall(id(\"a\"),[],id(\"getId\"),[])]))])),declarationStatement(variables([],long(),[variable(id(\"aLength\"),[],methodCall(bracket(cast(simpleType(id(\"Long\")),arrayAccess(id(\"data\"),qualifiedName([id(\"LOB_IDS\"),id(\"LOB_LENGTH\")])))),[],id(\"longValue\"),[]))])),declarationStatement(variables([],arrayType(int()),[variable(id(\"aAddresses\"),[],methodCall([],id(\"getBlockAddresses\"),[methodCall(id(\"a\"),[],id(\"getId\"),[]),number(\"0\"),qualifiedName([id(\"Integer\"),id(\"MAX_VALUE\")])]))])),declarationStatement(variables([],int(),[variable(id(\"aIndex\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"bOffset\"),[],number(\"0\"))])),declarationStatement(variables([],int(),[variable(id(\"aOffset\"),[],number(\"0\"))]))]",
+    "SourceCode": "[\"declarationStatement(variables([],arrayType(simpleType(id(\\\"Object\\\"))),[variable(id(\\\"data\\\"),[],methodCall([],id(\\\"getLobHeader\\\"),[methodCall(id(\\\"a\\\"),[],id(\\\"getId\\\"),[])]))]))\",\"declarationStatement(variables([],long(),[variable(id(\\\"aLength\\\"),[],methodCall(bracket(cast(simpleType(id(\\\"Long\\\")),arrayAccess(id(\\\"data\\\"),qualifiedName([id(\\\"LOB_IDS\\\"),id(\\\"LOB_LENGTH\\\")])))),[],id(\\\"longValue\\\"),[]))]))\",\"declarationStatement(variables([],arrayType(int()),[variable(id(\\\"aAddresses\\\"),[],methodCall([],id(\\\"getBlockAddresses\\\"),[methodCall(id(\\\"a\\\"),[],id(\\\"getId\\\"),[]),number(\\\"0\\\"),qualifiedName([id(\\\"Integer\\\"),id(\\\"MAX_VALUE\\\")])]))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"aIndex\\\"),[],number(\\\"0\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"bOffset\\\"),[],number(\\\"0\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"aOffset\\\"),[],number(\\\"0\\\"))]))\"]",
     "Pair1": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/persist/LobManager.java(790,796)",
     "Pair2": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/persist/LobManager.java(695,701)",
     "NumberOfLines": "6"
    },
    {
-    "SourceCode": "[expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"BUFFER_LENGTH\\\"\"),qualifiedName([id(\"Type\"),id(\"SQL_INTEGER\")])])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"DECIMAL_DIGITS\\\"\"),qualifiedName([id(\"Type\"),id(\"SQL_SMALLINT\")])])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"PSEUDO_COLUMN\\\"\"),qualifiedName([id(\"Type\"),id(\"SQL_SMALLINT\")])])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"TABLE_CAT\\\"\"),id(\"SQL_IDENTIFIER\")])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"TABLE_SCHEM\\\"\"),id(\"SQL_IDENTIFIER\")])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"TABLE_NAME\\\"\"),id(\"SQL_IDENTIFIER\")]))]",
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"BUFFER_LENGTH\\\\\\\"\\\"),qualifiedName([id(\\\"Type\\\"),id(\\\"SQL_INTEGER\\\")])]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"DECIMAL_DIGITS\\\\\\\"\\\"),qualifiedName([id(\\\"Type\\\"),id(\\\"SQL_SMALLINT\\\")])]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"PSEUDO_COLUMN\\\\\\\"\\\"),qualifiedName([id(\\\"Type\\\"),id(\\\"SQL_SMALLINT\\\")])]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"TABLE_CAT\\\\\\\"\\\"),id(\\\"SQL_IDENTIFIER\\\")]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"TABLE_SCHEM\\\\\\\"\\\"),id(\\\"SQL_IDENTIFIER\\\")]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"TABLE_NAME\\\\\\\"\\\"),id(\\\"SQL_IDENTIFIER\\\")]))\"]",
     "Pair1": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationMain.java(647,652)",
     "Pair2": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationMain.java(2801,2810)",
     "NumberOfLines": "6"
    },
    {
-    "SourceCode": "[expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"BUFFER_LENGTH\\\"\"),qualifiedName([id(\"Type\"),id(\"SQL_INTEGER\")])])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"DECIMAL_DIGITS\\\"\"),qualifiedName([id(\"Type\"),id(\"SQL_SMALLINT\")])])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"PSEUDO_COLUMN\\\"\"),qualifiedName([id(\"Type\"),id(\"SQL_SMALLINT\")])])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"TABLE_CAT\\\"\"),id(\"SQL_IDENTIFIER\")])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"TABLE_SCHEM\\\"\"),id(\"SQL_IDENTIFIER\")])),expressionStatement(methodCall([],id(\"addColumn\"),[id(\"t\"),stringLiteral(\"\\\"TABLE_NAME\\\"\"),id(\"SQL_IDENTIFIER\")]))]",
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"BUFFER_LENGTH\\\\\\\"\\\"),qualifiedName([id(\\\"Type\\\"),id(\\\"SQL_INTEGER\\\")])]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"DECIMAL_DIGITS\\\\\\\"\\\"),qualifiedName([id(\\\"Type\\\"),id(\\\"SQL_SMALLINT\\\")])]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"PSEUDO_COLUMN\\\\\\\"\\\"),qualifiedName([id(\\\"Type\\\"),id(\\\"SQL_SMALLINT\\\")])]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"TABLE_CAT\\\\\\\"\\\"),id(\\\"SQL_IDENTIFIER\\\")]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"TABLE_SCHEM\\\\\\\"\\\"),id(\\\"SQL_IDENTIFIER\\\")]))\",\"expressionStatement(methodCall([],id(\\\"addColumn\\\"),[id(\\\"t\\\"),stringLiteral(\\\"\\\\\\\"TABLE_NAME\\\\\\\"\\\"),id(\\\"SQL_IDENTIFIER\\\")]))\"]",
     "Pair1": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationMain.java(2801,2810)",
     "Pair2": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationMain.java(647,652)",
     "NumberOfLines": "6"
    },
    {
-    "SourceCode": "[declarationStatement(variables([],simpleType(id(\"Iterator\")),[variable(id(\"tables\"),[])])),declarationStatement(variables([],simpleType(id(\"Table\")),[variable(id(\"table\"),[])])),declarationStatement(variables([],arrayType(simpleType(id(\"Object\"))),[variable(id(\"row\"),[])])),declarationStatement(variables([final()],int(),[variable(id(\"table_catalog\"),[],number(\"0\"))])),declarationStatement(variables([final()],int(),[variable(id(\"table_schema\"),[],number(\"1\"))])),declarationStatement(variables([final()],int(),[variable(id(\"table_name\"),[],number(\"2\"))]))]",
-    "Pair1": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationMain.java(3482,3488)",
-    "Pair2": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(1327,1333)",
+    "SourceCode": "[\"declarationStatement(variables([],simpleType(id(\\\"Iterator\\\")),[variable(id(\\\"tables\\\"),[])]))\",\"declarationStatement(variables([],simpleType(id(\\\"Table\\\")),[variable(id(\\\"table\\\"),[])]))\",\"declarationStatement(variables([],arrayType(simpleType(id(\\\"Object\\\"))),[variable(id(\\\"row\\\"),[])]))\",\"declarationStatement(variables([final()],int(),[variable(id(\\\"table_catalog\\\"),[],number(\\\"0\\\"))]))\",\"declarationStatement(variables([final()],int(),[variable(id(\\\"table_schema\\\"),[],number(\\\"1\\\"))]))\",\"declarationStatement(variables([final()],int(),[variable(id(\\\"table_name\\\"),[],number(\\\"2\\\"))]))\"]",
+    "Pair1": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationMain.java(3483,3488)",
+    "Pair2": "hsqldb-2.3.1/hsqldb/src/org/hsqldb/dbinfo/DatabaseInformationFull.java(1328,1333)",
     "NumberOfLines": "6"
    }
   ],
-  "TotalNumberOfClonePairs": 3937.0,
+  "TotalNumberOfClonePairs": 4232.0,
   "BiggestCloneClassInLines": "[\"hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestSqlPersistent.java(445,534)\",\"hsqldb-2.3.1/hsqldb/src/org/hsqldb/test/TestSql.java(370,459)\"]"
  }
 }

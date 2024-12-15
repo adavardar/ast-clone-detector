@@ -5,13 +5,13 @@
    "smallsql0.21_src": 24853
   },
   "BiggestCloneClassLineSize": "21",
-  "NumberOfClonesClasses": 72,
+  "NumberOfClonesClasses": 94,
   "NumberOfDuplicatedLinesPerFile": {
    "smallsql0.21_src/src/smallsql/junit/TestAlterTable2.java": 14,
    "smallsql0.21_src/src/smallsql/database/IndexDescription.java": 6,
    "smallsql0.21_src/src/smallsql/junit/TestStatement.java": 18,
    "smallsql0.21_src/src/smallsql/junit/TestAlterTable.java": 10,
-   "smallsql0.21_src/src/smallsql/junit/TestOperatoren.java": 27,
+   "smallsql0.21_src/src/smallsql/junit/TestOperatoren.java": 119,
    "smallsql0.21_src/src/smallsql/database/TableView.java": 6,
    "smallsql0.21_src/src/smallsql/database/LongTreeList.java": 22,
    "smallsql0.21_src/src/smallsql/junit/TestScrollable.java": 32,
@@ -22,12 +22,46 @@
    "smallsql0.21_src/src/smallsql/junit/TestResultSet.java": 58,
    "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java": 235
   },
-  "PercentageOfDuplicatedLines": "2.61537842500%",
-  "BiggestCloneClassInMembers": [],
-  "BiggestCloneClassMemberCount": 0,
+  "PercentageOfDuplicatedLines": "2.98555506400%",
+  "BiggestCloneClassInMembers": [
+   "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(304,312)",
+   "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(116,124)"
+  ],
+  "BiggestCloneClassMemberCount": 12,
   "TotalLineCountOfFolder": 24853,
-  "ExampleClones": [],
-  "TotalNumberOfClonePairs": 650.0,
+  "ExampleClones": [
+   {
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"1\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isLast\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"next\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"next\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"isBeforeFirst\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isBeforeFirst\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isAfterLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isAfterLast\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"0\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"first\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"first\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"1\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"previous\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"previous\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"0\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isBeforeFirst\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isBeforeFirst\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"isAfterLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isAfterLast\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"last\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"last\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"1\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isLast\\\"),[])]))\",\"expressionStatement(methodCall(id(\\\"rs\\\"),[],id(\\\"afterLast\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"isBeforeFirst\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isBeforeFirst\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isAfterLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isAfterLast\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"0\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestResultSet.java(128,150)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestResultSet.java(85,107)",
+    "NumberOfLines": "19"
+   },
+   {
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"1\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isLast\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"next\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"next\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"isBeforeFirst\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isBeforeFirst\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isAfterLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isAfterLast\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"0\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"first\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"first\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"1\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"previous\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"previous\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"0\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isBeforeFirst\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isBeforeFirst\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"isAfterLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isAfterLast\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"last\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"last\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"1\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isLast\\\"),[])]))\",\"expressionStatement(methodCall(id(\\\"rs\\\"),[],id(\\\"afterLast\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[stringLiteral(\\\"\\\\\\\"isBeforeFirst\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isBeforeFirst\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[stringLiteral(\\\"\\\\\\\"isAfterLast\\\\\\\"\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"isAfterLast\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[stringLiteral(\\\"\\\\\\\"getRow\\\\\\\"\\\"),number(\\\"0\\\"),methodCall(id(\\\"rs\\\"),[],id(\\\"getRow\\\"),[])]))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestResultSet.java(85,107)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestResultSet.java(128,150)",
+    "NumberOfLines": "19"
+   },
+   {
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"init\\\"),[]))\",\"declarationStatement(variables([],simpleType(id(\\\"Connection\\\")),[variable(id(\\\"con\\\"),[],methodCall(id(\\\"AllTests\\\"),[],id(\\\"getConnection\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"Statement\\\")),[variable(id(\\\"st\\\"),[],methodCall(id(\\\"con\\\"),[],id(\\\"createStatement\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"ResultSet\\\")),[variable(id(\\\"rs\\\"),[])]))\",\"declarationStatement(variables([],simpleType(id(\\\"String\\\")),[variable(id(\\\"oldValue\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"rs\\\"),\\\"=\\\",methodCall(id(\\\"st\\\"),[],id(\\\"executeQuery\\\"),[plus(stringLiteral(\\\"\\\\\\\"SELECT * FROM \\\\\\\"\\\"),id(\\\"table1\\\"))])))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[methodCall(id(\\\"rs\\\"),[],id(\\\"next\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"oldValue\\\"),\\\"=\\\",methodCall(id(\\\"rs\\\"),[],id(\\\"getString\\\"),[stringLiteral(\\\"\\\\\\\"v\\\\\\\"\\\")])))\",\"declarationStatement(variables([],int(),[variable(id(\\\"count\\\"),[],number(\\\"1\\\"))]))\",\"while(conditionalAnd(notEquals(id(\\\"oldValue\\\"),null()),methodCall(id(\\\"rs\\\"),[],id(\\\"next\\\"),[])),block([declarationStatement(variables([],simpleType(id(\\\"String\\\")),[variable(id(\\\"newValue\\\"),[],methodCall(id(\\\"rs\\\"),[],id(\\\"getString\\\"),[stringLiteral(\\\"\\\\\\\"v\\\\\\\"\\\")]))])),if(notEquals(id(\\\"newValue\\\"),null()),block([expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[greater(methodCall(id(\\\"oldValue\\\"),[],id(\\\"compareTo\\\"),[id(\\\"newValue\\\")]),number(\\\"0\\\"))])),expressionStatement(postIncrement(id(\\\"count\\\")))])),expressionStatement(assignment(id(\\\"oldValue\\\"),\\\"=\\\",id(\\\"newValue\\\")))]))\",\"expressionStatement(methodCall([],id(\\\"assertNull\\\"),[id(\\\"oldValue\\\")]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[methodCall(id(\\\"rs\\\"),[],id(\\\"next\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[id(\\\"valueCount\\\"),id(\\\"count\\\")]))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(227,250)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(199,222)",
+    "NumberOfLines": "13"
+   },
+   {
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"init\\\"),[]))\",\"declarationStatement(variables([],simpleType(id(\\\"Connection\\\")),[variable(id(\\\"con\\\"),[],methodCall(id(\\\"AllTests\\\"),[],id(\\\"getConnection\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"Statement\\\")),[variable(id(\\\"st\\\"),[],methodCall(id(\\\"con\\\"),[],id(\\\"createStatement\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"ResultSet\\\")),[variable(id(\\\"rs\\\"),[])]))\",\"declarationStatement(variables([],simpleType(id(\\\"String\\\")),[variable(id(\\\"oldValue\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"rs\\\"),\\\"=\\\",methodCall(id(\\\"st\\\"),[],id(\\\"executeQuery\\\"),[plus(stringLiteral(\\\"\\\\\\\"SELECT * FROM \\\\\\\"\\\"),id(\\\"table1\\\"))])))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[methodCall(id(\\\"rs\\\"),[],id(\\\"next\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"oldValue\\\"),\\\"=\\\",methodCall(id(\\\"rs\\\"),[],id(\\\"getString\\\"),[stringLiteral(\\\"\\\\\\\"v\\\\\\\"\\\")])))\",\"declarationStatement(variables([],int(),[variable(id(\\\"count\\\"),[],number(\\\"1\\\"))]))\",\"while(conditionalAnd(notEquals(id(\\\"oldValue\\\"),null()),methodCall(id(\\\"rs\\\"),[],id(\\\"next\\\"),[])),block([declarationStatement(variables([],simpleType(id(\\\"String\\\")),[variable(id(\\\"newValue\\\"),[],methodCall(id(\\\"rs\\\"),[],id(\\\"getString\\\"),[stringLiteral(\\\"\\\\\\\"v\\\\\\\"\\\")]))])),if(notEquals(id(\\\"newValue\\\"),null()),block([expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[greater(methodCall(id(\\\"oldValue\\\"),[],id(\\\"compareTo\\\"),[id(\\\"newValue\\\")]),number(\\\"0\\\"))])),expressionStatement(postIncrement(id(\\\"count\\\")))])),expressionStatement(assignment(id(\\\"oldValue\\\"),\\\"=\\\",id(\\\"newValue\\\")))]))\",\"expressionStatement(methodCall([],id(\\\"assertNull\\\"),[id(\\\"oldValue\\\")]))\",\"expressionStatement(methodCall([],id(\\\"assertFalse\\\"),[methodCall(id(\\\"rs\\\"),[],id(\\\"next\\\"),[])]))\",\"expressionStatement(methodCall([],id(\\\"assertEquals\\\"),[id(\\\"valueCount\\\"),id(\\\"count\\\")]))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(199,222)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(227,250)",
+    "NumberOfLines": "13"
+   },
+   {
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"init\\\"),[]))\",\"declarationStatement(variables([],simpleType(id(\\\"Connection\\\")),[variable(id(\\\"con\\\"),[],methodCall(id(\\\"AllTests\\\"),[],id(\\\"getConnection\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"Statement\\\")),[variable(id(\\\"st\\\"),[],methodCall(id(\\\"con\\\"),[],id(\\\"createStatement\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"ResultSet\\\")),[variable(id(\\\"rs\\\"),[])]))\",\"declarationStatement(variables([],simpleType(id(\\\"String\\\")),[variable(id(\\\"oldValue\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"rs\\\"),\\\"=\\\",methodCall(id(\\\"st\\\"),[],id(\\\"executeQuery\\\"),[plus(stringLiteral(\\\"\\\\\\\"SELECT * FROM \\\\\\\"\\\"),id(\\\"table1\\\"))])))\",\"expressionStatement(methodCall([],id(\\\"assertTrue\\\"),[methodCall(id(\\\"rs\\\"),[],id(\\\"next\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"oldValue\\\"),\\\"=\\\",methodCall(id(\\\"rs\\\"),[],id(\\\"getString\\\"),[stringLiteral(\\\"\\\\\\\"v\\\\\\\"\\\")])))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(144,154)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(199,208)",
+    "NumberOfLines": "8"
+   }
+  ],
+  "TotalNumberOfClonePairs": 742.0,
   "BiggestCloneClassInLines": "[\"smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(699,725)\",\"smallsql0.21_src/src/smallsql/junit/TestOperatoren.java(115,141)\",\"smallsql0.21_src/src/smallsql/junit/TestJoins.java(129,155)\",\"smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(730,756)\"]"
  },
  "Type-2": {
@@ -36,7 +70,7 @@
    "smallsql0.21_src": 24853
   },
   "BiggestCloneClassLineSize": "33",
-  "NumberOfClonesClasses": 108,
+  "NumberOfClonesClasses": 134,
   "NumberOfDuplicatedLinesPerFile": {
    "smallsql0.21_src/src/smallsql/junit/TestAlterTable2.java": 14,
    "smallsql0.21_src/src/smallsql/junit/TestExceptionMethods.java": 50,
@@ -47,11 +81,11 @@
    "smallsql0.21_src/src/smallsql/database/Money.java": 8,
    "smallsql0.21_src/src/smallsql/junit/TestAlterTable.java": 10,
    "smallsql0.21_src/src/smallsql/database/MemoryStream.java": 8,
-   "smallsql0.21_src/src/smallsql/junit/TestOperatoren.java": 27,
+   "smallsql0.21_src/src/smallsql/junit/TestOperatoren.java": 119,
    "smallsql0.21_src/src/smallsql/database/TableView.java": 14,
    "smallsql0.21_src/src/smallsql/database/LongTreeList.java": 22,
    "smallsql0.21_src/src/smallsql/database/Utils.java": 8,
-   "smallsql0.21_src/src/smallsql/junit/TestScrollable.java": 46,
+   "smallsql0.21_src/src/smallsql/junit/TestScrollable.java": 78,
    "smallsql0.21_src/src/smallsql/junit/TestMoneyRounding.java": 16,
    "smallsql0.21_src/src/smallsql/junit/BenchTest.java": 135,
    "smallsql0.21_src/src/smallsql/junit/TestTransactions.java": 62,
@@ -63,12 +97,49 @@
    "smallsql0.21_src/src/smallsql/junit/AllTests.java": 22,
    "smallsql0.21_src/src/smallsql/database/DateTime.java": 7
   },
-  "PercentageOfDuplicatedLines": "3.75809761400%",
-  "BiggestCloneClassInMembers": [],
-  "BiggestCloneClassMemberCount": 0,
+  "PercentageOfDuplicatedLines": "4.25703134400%",
+  "BiggestCloneClassInMembers": [
+   "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(494,502)",
+   "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(520,528)",
+   "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(304,312)",
+   "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(116,124)",
+   "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(468,476)"
+  ],
+  "BiggestCloneClassMemberCount": 24,
   "TotalLineCountOfFolder": 24853,
-  "ExampleClones": [],
-  "TotalNumberOfClonePairs": 934.0,
+  "ExampleClones": [
+   {
+    "SourceCode": "[\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/AllTests.java(106,112)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/AllTests.java(109,115)",
+    "NumberOfLines": "7"
+   },
+   {
+    "SourceCode": "[\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\",\"expressionStatement(methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[type(simpleType(id(\\\"NormalizedName\\\")))]))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/AllTests.java(109,115)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/AllTests.java(106,112)",
+    "NumberOfLines": "7"
+   },
+   {
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"NormalizedName\\\"),[]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[],methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[],methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[])]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[plus(stringLiteral(\\\"\\\\\\\"SELECT * FROM \\\\\\\"\\\"),id(\\\"NormalizedName\\\"))])))\",\"expressionStatement(methodCall([],id(\\\"NormalizedName\\\"),[methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"v\\\\\\\"\\\")])))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(171,181)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(281,291)",
+    "NumberOfLines": "8"
+   },
+   {
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"NormalizedName\\\"),[]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[],methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[],methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[])]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[plus(stringLiteral(\\\"\\\\\\\"SELECT * FROM \\\\\\\"\\\"),id(\\\"NormalizedName\\\"))])))\",\"expressionStatement(methodCall([],id(\\\"NormalizedName\\\"),[methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"v\\\\\\\"\\\")])))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(171,181)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(227,236)",
+    "NumberOfLines": "8"
+   },
+   {
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"NormalizedName\\\"),[]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[],methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[],methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[]))]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[])]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[plus(stringLiteral(\\\"\\\\\\\"SELECT * FROM \\\\\\\"\\\"),id(\\\"NormalizedName\\\"))])))\",\"expressionStatement(methodCall([],id(\\\"NormalizedName\\\"),[methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[])]))\",\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",methodCall(id(\\\"NormalizedName\\\"),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"v\\\\\\\"\\\")])))\"]",
+    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(281,291)",
+    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(171,181)",
+    "NumberOfLines": "8"
+   }
+  ],
+  "TotalNumberOfClonePairs": 1058.0,
   "BiggestCloneClassInLines": "[\"smallsql0.21_src/src/smallsql/junit/TestOther.java(99,137)\",\"smallsql0.21_src/src/smallsql/junit/TestOther.java(98,136)\"]"
  }
 }
