@@ -290,7 +290,8 @@ map[str,real] calculateFilePercentage(map[str, int] countLine, map[str, int] dup
     map[str,real] result = ();
 
     // iterate over each file in countLine
-    for (str key <- countLine) {
+    for (str key <- duplicateLine) {
+
         int totalLine = countLine[key]; // get the total line count for the file
         real dupLine = duplicateLine[key] * 1.0; // get the duplicated line count for the file and convert to real
         real percent = (dupLine / totalLine) * 100.0; // calculate the percentage of duplicated lines

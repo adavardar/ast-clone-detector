@@ -62,7 +62,7 @@
  "Type-2": {
   "NumberOfFilesWithDuplicatedCode": 3,
   "PercentageOfDuplicatedLinesPerFile": {
-   "Tests/CodeClones1/Example.java": 50.0,
+   "Tests/CodeClones1/Example.java": 35.71428571,
    "Tests/CodeClones1/Example3.java": 36.36363636,
    "Tests/CodeClones1/Example2.java": 36.36363636
   },
@@ -72,17 +72,21 @@
    "Tests/CodeClones1/Example2.java": 11
   },
   "BiggestCloneClassLineSize": "4",
-  "NumberOfClonesClasses": 26,
+  "NumberOfClonesClasses": 11,
   "NumberOfDuplicatedLinesPerFile": {
-   "Tests/CodeClones1/Example.java": 14,
+   "Tests/CodeClones1/Example.java": 10,
    "Tests/CodeClones1/Example3.java": 4,
    "Tests/CodeClones1/Example2.java": 4
   },
-  "PercentageOfDuplicatedLines": "44.00%",
+  "PercentageOfDuplicatedLines": "36.00%",
   "BiggestCloneClassInMembers": [
-   "Tests/CodeClones1/Example.java(22,22)"
+   "Tests/CodeClones1/Example2.java(8,9)",
+   "Tests/CodeClones1/Example3.java(8,9)",
+   "Tests/CodeClones1/Example.java(5,6)",
+   "Tests/CodeClones1/Example.java(25,26)",
+   "Tests/CodeClones1/Example.java(13,14)"
   ],
-  "BiggestCloneClassMemberCount": 10,
+  "BiggestCloneClassMemberCount": 4,
   "TotalLineCountOfFolder": 50,
   "ExampleClones": [
    {
@@ -98,25 +102,25 @@
     "NumberOfLines": "4"
    },
    {
-    "SourceCode": "[\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",number(\\\"4\\\")))\"]",
-    "Pair1": "Tests/CodeClones1/Example.java(7,7)",
-    "Pair2": "Tests/CodeClones1/Example.java(15,15)",
-    "NumberOfLines": "1"
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",number(\\\"2\\\")))\",\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",number(\\\"3\\\")))\"]",
+    "Pair1": "Tests/CodeClones1/Example3.java(8,9)",
+    "Pair2": "Tests/CodeClones1/Example.java(13,14)",
+    "NumberOfLines": "2"
    },
    {
-    "SourceCode": "[\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",number(\\\"4\\\")))\"]",
-    "Pair1": "Tests/CodeClones1/Example.java(7,7)",
-    "Pair2": "Tests/CodeClones1/Example.java(27,27)",
-    "NumberOfLines": "1"
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",number(\\\"2\\\")))\",\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",number(\\\"3\\\")))\"]",
+    "Pair1": "Tests/CodeClones1/Example.java(25,26)",
+    "Pair2": "Tests/CodeClones1/Example2.java(8,9)",
+    "NumberOfLines": "2"
    },
    {
-    "SourceCode": "[\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",number(\\\"4\\\")))\"]",
-    "Pair1": "Tests/CodeClones1/Example.java(27,27)",
-    "Pair2": "Tests/CodeClones1/Example.java(7,7)",
-    "NumberOfLines": "1"
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",number(\\\"2\\\")))\",\"expressionStatement(assignment(id(\\\"NormalizedName\\\"),\\\"=\\\",number(\\\"3\\\")))\"]",
+    "Pair1": "Tests/CodeClones1/Example.java(13,14)",
+    "Pair2": "Tests/CodeClones1/Example3.java(8,9)",
+    "NumberOfLines": "2"
    }
   ],
-  "TotalNumberOfClonePairs": 22.0,
-  "BiggestCloneClassInLines": "[\"Tests/CodeClones1/Example3.java(7,10)\",\"Tests/CodeClones1/Example2.java(7,10)\",\"Tests/CodeClones1/Example.java(13,16)\",\"Tests/CodeClones1/Example.java(25,28)\"]"
+  "TotalNumberOfClonePairs": 18.0,
+  "BiggestCloneClassInLines": "[\"Tests/CodeClones1/Example3.java(7,10)\",\"Tests/CodeClones1/Example2.java(7,10)\",\"Tests/CodeClones1/Example.java(25,28)\",\"Tests/CodeClones1/Example.java(13,16)\"]"
  }
 }
