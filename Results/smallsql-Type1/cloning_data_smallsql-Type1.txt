@@ -23,44 +23,10 @@
    "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java": 235
   },
   "PercentageOfDuplicatedLines": "2.61537842500%",
-  "BiggestCloneClassInMembers": [
-   "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(304,312)",
-   "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(116,124)"
-  ],
-  "BiggestCloneClassMemberCount": 12,
+  "BiggestCloneClassInMembers": [],
+  "BiggestCloneClassMemberCount": 0,
   "TotalLineCountOfFolder": 24853,
-  "ExampleClones": [
-   {
-    "SourceCode": "[expressionStatement(methodCall([],id(\"init\"),[])),declarationStatement(variables([],simpleType(id(\"Connection\")),[variable(id(\"con\"),[],methodCall(id(\"AllTests\"),[],id(\"getConnection\"),[]))])),declarationStatement(variables([],simpleType(id(\"Statement\")),[variable(id(\"st\"),[],methodCall(id(\"con\"),[],id(\"createStatement\"),[]))])),declarationStatement(variables([],simpleType(id(\"ResultSet\")),[variable(id(\"rs\"),[])])),declarationStatement(variables([],simpleType(id(\"Integer\")),[variable(id(\"oldValue\"),[])])),expressionStatement(assignment(id(\"rs\"),\"=\",methodCall(id(\"st\"),[],id(\"executeQuery\"),[plus(stringLiteral(\"\\\"SELECT * FROM \\\"\"),id(\"table1\"))]))),expressionStatement(methodCall([],id(\"assertTrue\"),[methodCall(id(\"rs\"),[],id(\"next\"),[])])),expressionStatement(assignment(id(\"oldValue\"),\"=\",cast(simpleType(id(\"Integer\")),methodCall(id(\"rs\"),[],id(\"getObject\"),[stringLiteral(\"\\\"i\\\"\")]))))]",
-    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(330,340)",
-    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(441,450)",
-    "NumberOfLines": "8"
-   },
-   {
-    "SourceCode": "[expressionStatement(methodCall([],id(\"init\"),[])),declarationStatement(variables([],simpleType(id(\"Connection\")),[variable(id(\"con\"),[],methodCall(id(\"AllTests\"),[],id(\"getConnection\"),[]))])),declarationStatement(variables([],simpleType(id(\"Statement\")),[variable(id(\"st\"),[],methodCall(id(\"con\"),[],id(\"createStatement\"),[]))])),declarationStatement(variables([],simpleType(id(\"ResultSet\")),[variable(id(\"rs\"),[])])),declarationStatement(variables([],simpleType(id(\"Integer\")),[variable(id(\"oldValue\"),[])])),expressionStatement(assignment(id(\"rs\"),\"=\",methodCall(id(\"st\"),[],id(\"executeQuery\"),[plus(stringLiteral(\"\\\"SELECT * FROM \\\"\"),id(\"table1\"))]))),expressionStatement(methodCall([],id(\"assertTrue\"),[methodCall(id(\"rs\"),[],id(\"next\"),[])])),expressionStatement(assignment(id(\"oldValue\"),\"=\",cast(simpleType(id(\"Integer\")),methodCall(id(\"rs\"),[],id(\"getObject\"),[stringLiteral(\"\\\"i\\\"\")]))))]",
-    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(415,425)",
-    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(441,450)",
-    "NumberOfLines": "8"
-   },
-   {
-    "SourceCode": "[expressionStatement(methodCall([],id(\"init\"),[])),declarationStatement(variables([],simpleType(id(\"Connection\")),[variable(id(\"con\"),[],methodCall(id(\"AllTests\"),[],id(\"getConnection\"),[]))])),declarationStatement(variables([],simpleType(id(\"Statement\")),[variable(id(\"st\"),[],methodCall(id(\"con\"),[],id(\"createStatement\"),[]))])),declarationStatement(variables([],simpleType(id(\"ResultSet\")),[variable(id(\"rs\"),[])])),declarationStatement(variables([],simpleType(id(\"Integer\")),[variable(id(\"oldValue\"),[])])),expressionStatement(assignment(id(\"rs\"),\"=\",methodCall(id(\"st\"),[],id(\"executeQuery\"),[plus(stringLiteral(\"\\\"SELECT * FROM \\\"\"),id(\"table1\"))]))),expressionStatement(methodCall([],id(\"assertTrue\"),[methodCall(id(\"rs\"),[],id(\"next\"),[])])),expressionStatement(assignment(id(\"oldValue\"),\"=\",cast(simpleType(id(\"Integer\")),methodCall(id(\"rs\"),[],id(\"getObject\"),[stringLiteral(\"\\\"i\\\"\")]))))]",
-    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(441,450)",
-    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(330,340)",
-    "NumberOfLines": "8"
-   },
-   {
-    "SourceCode": "[expressionStatement(methodCall([],id(\"init\"),[])),declarationStatement(variables([],simpleType(id(\"Connection\")),[variable(id(\"con\"),[],methodCall(id(\"AllTests\"),[],id(\"getConnection\"),[]))])),declarationStatement(variables([],simpleType(id(\"Statement\")),[variable(id(\"st\"),[],methodCall(id(\"con\"),[],id(\"createStatement\"),[]))])),declarationStatement(variables([],simpleType(id(\"ResultSet\")),[variable(id(\"rs\"),[])])),declarationStatement(variables([],simpleType(id(\"Integer\")),[variable(id(\"oldValue\"),[])])),expressionStatement(assignment(id(\"rs\"),\"=\",methodCall(id(\"st\"),[],id(\"executeQuery\"),[plus(stringLiteral(\"\\\"SELECT * FROM \\\"\"),id(\"table1\"))]))),expressionStatement(methodCall([],id(\"assertTrue\"),[methodCall(id(\"rs\"),[],id(\"next\"),[])])),expressionStatement(assignment(id(\"oldValue\"),\"=\",cast(simpleType(id(\"Integer\")),methodCall(id(\"rs\"),[],id(\"getObject\"),[stringLiteral(\"\\\"i\\\"\")]))))]",
-    "Pair1": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(441,450)",
-    "Pair2": "smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(415,425)",
-    "NumberOfLines": "8"
-   },
-   {
-    "SourceCode": "[expressionStatement(assignment(id(\"result\"),\"|=\",bracket(leftShift(bracket(cast(long(),id(\"nextEntry\"))),id(\"shift\"))))),if(greaterEquals(qualifiedName([id(\"listEnum\"),id(\"stack\")]),number(\"3\")),block([expressionStatement(assignment(arrayAccess(qualifiedName([id(\"listEnum\"),id(\"offsetStack\")]),qualifiedName([id(\"listEnum\"),id(\"stack\")])),\"=\",id(\"offset\"))),return(id(\"result\"))])),expressionStatement(assignment(arrayAccess(qualifiedName([id(\"listEnum\"),id(\"offsetStack\")]),qualifiedName([id(\"listEnum\"),id(\"stack\")])),\"=\",plus(id(\"offset\"),id(\"pointerSize\")))),expressionStatement(assignment(id(\"offset\"),\"=\",methodCall([],id(\"getPointer\"),[]))),expressionStatement(assignment(id(\"shift\"),\"-=\",number(\"16\"))),expressionStatement(postIncrement(qualifiedName([id(\"listEnum\"),id(\"stack\")]))),expressionStatement(assignment(arrayAccess(qualifiedName([id(\"listEnum\"),id(\"resultStack\")]),qualifiedName([id(\"listEnum\"),id(\"stack\")])),\"=\",id(\"result\")))]",
-    "Pair1": "smallsql0.21_src/src/smallsql/database/LongTreeList.java(376,386)",
-    "Pair2": "smallsql0.21_src/src/smallsql/database/LongTreeList.java(331,341)",
-    "NumberOfLines": "7"
-   }
-  ],
+  "ExampleClones": [],
   "TotalNumberOfClonePairs": 650.0,
   "BiggestCloneClassInLines": "[\"smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(699,725)\",\"smallsql0.21_src/src/smallsql/junit/TestOperatoren.java(115,141)\",\"smallsql0.21_src/src/smallsql/junit/TestJoins.java(129,155)\",\"smallsql0.21_src/src/smallsql/junit/TestOrderBy.java(730,756)\"]"
  }

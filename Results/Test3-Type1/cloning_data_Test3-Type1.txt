@@ -21,25 +21,25 @@
   "TotalLineCountOfFolder": 46,
   "ExampleClones": [
    {
-    "SourceCode": "[expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"a\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"b\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"c\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"d\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"e\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"f\\\"\")]))]",
+    "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
     "Pair1": "Tests/CodeClones3/Example2.java(7,12)",
     "Pair2": "Tests/CodeClones3/Example1.java(7,12)",
     "NumberOfLines": "6"
    },
    {
-    "SourceCode": "[expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"a\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"b\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"c\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"d\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"e\\\"\")])),expressionStatement(methodCall(qualifiedName([id(\"System\"),id(\"out\")]),[],id(\"println\"),[stringLiteral(\"\\\"f\\\"\")]))]",
+    "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
     "Pair1": "Tests/CodeClones3/Example1.java(7,12)",
     "Pair2": "Tests/CodeClones3/Example2.java(7,12)",
     "NumberOfLines": "6"
    },
    {
-    "SourceCode": "[expressionStatement(methodCall([],id(\"function1\"),[])),expressionStatement(methodCall([],id(\"function2\"),[]))]",
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"function1\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"function2\\\"),[]))\"]",
     "Pair1": "Tests/CodeClones3/Example2.java(26,27)",
     "Pair2": "Tests/CodeClones3/Example1.java(26,27)",
     "NumberOfLines": "2"
    },
    {
-    "SourceCode": "[expressionStatement(methodCall([],id(\"function1\"),[])),expressionStatement(methodCall([],id(\"function2\"),[]))]",
+    "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"function1\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"function2\\\"),[]))\"]",
     "Pair1": "Tests/CodeClones3/Example1.java(26,27)",
     "Pair2": "Tests/CodeClones3/Example2.java(26,27)",
     "NumberOfLines": "2"

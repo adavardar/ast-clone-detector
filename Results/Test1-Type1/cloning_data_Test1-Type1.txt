@@ -19,31 +19,31 @@
   "TotalLineCountOfFolder": 50,
   "ExampleClones": [
    {
-    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"a\\\"),\\\"=\\\",number(\\\"1\\\")))\",\"expressionStatement(assignment(id(\\\"b\\\"),\\\"=\\\",number(\\\"2\\\")))\"]",
     "Pair1": "Tests/CodeClones1/Example.java(5,6)",
     "Pair2": "Tests/CodeClones1/Example3.java(7,8)",
     "NumberOfLines": "2"
    },
    {
-    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"a\\\"),\\\"=\\\",number(\\\"1\\\")))\",\"expressionStatement(assignment(id(\\\"b\\\"),\\\"=\\\",number(\\\"2\\\")))\"]",
     "Pair1": "Tests/CodeClones1/Example2.java(7,8)",
     "Pair2": "Tests/CodeClones1/Example.java(5,6)",
     "NumberOfLines": "2"
    },
    {
-    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"a\\\"),\\\"=\\\",number(\\\"1\\\")))\",\"expressionStatement(assignment(id(\\\"b\\\"),\\\"=\\\",number(\\\"2\\\")))\"]",
     "Pair1": "Tests/CodeClones1/Example3.java(7,8)",
     "Pair2": "Tests/CodeClones1/Example.java(5,6)",
     "NumberOfLines": "2"
    },
    {
-    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\")))]",
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"a\\\"),\\\"=\\\",number(\\\"1\\\")))\",\"expressionStatement(assignment(id(\\\"b\\\"),\\\"=\\\",number(\\\"2\\\")))\"]",
     "Pair1": "Tests/CodeClones1/Example.java(5,6)",
     "Pair2": "Tests/CodeClones1/Example2.java(7,8)",
     "NumberOfLines": "2"
    },
    {
-    "SourceCode": "[expressionStatement(assignment(id(\"a\"),\"=\",number(\"1\"))),expressionStatement(assignment(id(\"b\"),\"=\",number(\"2\"))),expressionStatement(assignment(id(\"c\"),\"=\",number(\"3\")))]",
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"a\\\"),\\\"=\\\",number(\\\"1\\\")))\",\"expressionStatement(assignment(id(\\\"b\\\"),\\\"=\\\",number(\\\"2\\\")))\",\"expressionStatement(assignment(id(\\\"c\\\"),\\\"=\\\",number(\\\"3\\\")))\"]",
     "Pair1": "Tests/CodeClones1/Example2.java(7,9)",
     "Pair2": "Tests/CodeClones1/Example3.java(7,9)",
     "NumberOfLines": "3"

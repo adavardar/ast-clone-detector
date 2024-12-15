@@ -23,31 +23,31 @@
   "TotalLineCountOfFolder": 42,
   "ExampleClones": [
    {
-    "SourceCode": "[declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"c\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"d\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"e\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"f\"),[],number(\"2\"))]))]",
+    "SourceCode": "[\"declarationStatement(variables([],int(),[variable(id(\\\"a\\\"),[],number(\\\"1\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"b\\\"),[],number(\\\"2\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"c\\\"),[],number(\\\"1\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"d\\\"),[],number(\\\"2\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"e\\\"),[],number(\\\"1\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"f\\\"),[],number(\\\"2\\\"))]))\"]",
     "Pair1": "Tests/CodeClones2/Example1.java(7,12)",
     "Pair2": "Tests/CodeClones2/Example2.java(7,12)",
     "NumberOfLines": "6"
    },
    {
-    "SourceCode": "[declarationStatement(variables([],int(),[variable(id(\"a\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"b\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"c\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"d\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"e\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"f\"),[],number(\"2\"))]))]",
+    "SourceCode": "[\"declarationStatement(variables([],int(),[variable(id(\\\"a\\\"),[],number(\\\"1\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"b\\\"),[],number(\\\"2\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"c\\\"),[],number(\\\"1\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"d\\\"),[],number(\\\"2\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"e\\\"),[],number(\\\"1\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"f\\\"),[],number(\\\"2\\\"))]))\"]",
     "Pair1": "Tests/CodeClones2/Example2.java(7,12)",
     "Pair2": "Tests/CodeClones2/Example1.java(7,12)",
     "NumberOfLines": "6"
    },
    {
-    "SourceCode": "[expressionStatement(assignment(id(\"aa\"),\"=\",number(\"0\")))]",
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"aa\\\"),\\\"=\\\",number(\\\"0\\\")))\"]",
     "Pair1": "Tests/CodeClones2/Example2.java(3,3)",
     "Pair2": "Tests/CodeClones2/Example1.java(3,3)",
     "NumberOfLines": "1"
    },
    {
-    "SourceCode": "[expressionStatement(assignment(id(\"aa\"),\"=\",number(\"0\")))]",
+    "SourceCode": "[\"expressionStatement(assignment(id(\\\"aa\\\"),\\\"=\\\",number(\\\"0\\\")))\"]",
     "Pair1": "Tests/CodeClones2/Example1.java(3,3)",
     "Pair2": "Tests/CodeClones2/Example2.java(3,3)",
     "NumberOfLines": "1"
    },
    {
-    "SourceCode": "[declarationStatement(variables([],int(),[variable(id(\"h\"),[],number(\"2\"))])),declarationStatement(variables([],int(),[variable(id(\"z\"),[],number(\"1\"))])),declarationStatement(variables([],int(),[variable(id(\"y\"),[],number(\"3\"))]))]",
+    "SourceCode": "[\"declarationStatement(variables([],int(),[variable(id(\\\"h\\\"),[],number(\\\"2\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"z\\\"),[],number(\\\"1\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"y\\\"),[],number(\\\"3\\\"))]))\"]",
     "Pair1": "Tests/CodeClones2/Example2.java(17,19)",
     "Pair2": "Tests/CodeClones2/Example1.java(17,19)",
     "NumberOfLines": "3"
