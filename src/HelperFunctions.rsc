@@ -362,7 +362,7 @@ map[str,value] findCloneStatistics(list[map[str,str]] clonePairs, list[map[str,s
     // return the result based on the type of clone detection
     return isType2 ? ("Type-2": cloneStatistics) : ("Type-1": cloneStatistics);
 }
-map[str, value] transformCloneStatisticsToD3Format(map[str, value] cloneStatistics) {
+map[str, value] transformToD3Format(map[str, value] cloneStatistics) {
     map[str, value] d3Data = ();
     list[map[str, value]] children = [];
 

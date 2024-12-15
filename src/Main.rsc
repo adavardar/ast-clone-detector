@@ -29,8 +29,8 @@ str main () {
     processFolder("Test2", |cwd:///Tests/CodeClones2/|, true);
     processFolder("Test3", |cwd:///Tests/CodeClones3/|, true);
 
-    //processFolder("smallsql", |cwd:///smallsql0.21_src|, false);
-    //processFolder("hsqldb", |cwd:///hsqldb-2.3.1|, false);
+    processFolder("smallsql", |cwd:///smallsql0.21_src|, false);
+    processFolder("hsqldb", |cwd:///hsqldb-2.3.1|, false);
 
     return "Detection is done!";
 }

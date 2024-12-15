@@ -1,6 +1,8 @@
 {
+ "name": "CloneStatistics",
  "children": [
   {
+   "name": "Type-1",
    "value": {
     "NumberOfFilesWithDuplicatedCode": 2,
     "PercentageOfDuplicatedLinesPerFile": {
@@ -54,10 +56,10 @@
     ],
     "TotalNumberOfClonePairs": 16.0,
     "BiggestCloneClassInLines": "[\"Tests/CodeClones3/Example2.java(7,12)\",\"Tests/CodeClones3/Example1.java(7,12)\"]"
-   },
-   "key": "Type-1"
+   }
   },
   {
+   "name": "Type-2",
    "value": {
     "NumberOfFilesWithDuplicatedCode": 2,
     "PercentageOfDuplicatedLinesPerFile": {
@@ -119,9 +121,7 @@
     ],
     "TotalNumberOfClonePairs": 30.0,
     "BiggestCloneClassInLines": "[\"Tests/CodeClones3/Example1.java(15,21)\",\"Tests/CodeClones3/Example2.java(16,22)\"]"
-   },
-   "key": "Type-2"
+   }
   }
- ],
- "key": "CloneStatistics"
+ ]
 }
