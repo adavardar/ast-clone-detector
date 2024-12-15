@@ -1,0 +1,127 @@
+{
+ "name": "CloneStatistics",
+ "children": [
+  {
+   "name": "Type-1",
+   "value": {
+    "NumberOfFilesWithDuplicatedCode": 2,
+    "PercentageOfDuplicatedLinesPerFile": {
+     "Tests/CodeClones3/Example2.java": 34.7826087,
+     "Tests/CodeClones3/Example1.java": 34.7826087
+    },
+    "LineCountOfFiles": {
+     "Tests/CodeClones3/Example2.java": 23,
+     "Tests/CodeClones3/Example1.java": 23
+    },
+    "BiggestCloneClassLineSize": "6",
+    "NumberOfClonesClasses": 4,
+    "NumberOfDuplicatedLinesPerFile": {
+     "Tests/CodeClones3/Example2.java": 8,
+     "Tests/CodeClones3/Example1.java": 8
+    },
+    "PercentageOfDuplicatedLines": "34.7826087000%",
+    "BiggestCloneClassInMembers": [
+     "Tests/CodeClones3/Example2.java(7,12)",
+     "Tests/CodeClones3/Example1.java(7,12)",
+     "Tests/CodeClones3/Example1.java(26,27)",
+     "Tests/CodeClones3/Example2.java(26,27)"
+    ],
+    "BiggestCloneClassMemberCount": 2,
+    "TotalLineCountOfFolder": 46,
+    "ExampleClones": [
+     {
+      "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
+      "Pair1": "Tests/CodeClones3/Example2.java(7,12)",
+      "Pair2": "Tests/CodeClones3/Example1.java(7,12)",
+      "NumberOfLines": "6"
+     },
+     {
+      "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"System\\\"),id(\\\"out\\\")]),[],id(\\\"println\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
+      "Pair1": "Tests/CodeClones3/Example1.java(7,12)",
+      "Pair2": "Tests/CodeClones3/Example2.java(7,12)",
+      "NumberOfLines": "6"
+     },
+     {
+      "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"function1\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"function2\\\"),[]))\"]",
+      "Pair1": "Tests/CodeClones3/Example2.java(26,27)",
+      "Pair2": "Tests/CodeClones3/Example1.java(26,27)",
+      "NumberOfLines": "2"
+     },
+     {
+      "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"function1\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"function2\\\"),[]))\"]",
+      "Pair1": "Tests/CodeClones3/Example1.java(26,27)",
+      "Pair2": "Tests/CodeClones3/Example2.java(26,27)",
+      "NumberOfLines": "2"
+     }
+    ],
+    "TotalNumberOfClonePairs": 16.0,
+    "BiggestCloneClassInLines": "[\"Tests/CodeClones3/Example2.java(7,12)\",\"Tests/CodeClones3/Example1.java(7,12)\"]"
+   }
+  },
+  {
+   "name": "Type-2",
+   "value": {
+    "NumberOfFilesWithDuplicatedCode": 2,
+    "PercentageOfDuplicatedLinesPerFile": {
+     "Tests/CodeClones3/Example2.java": 65.2173913,
+     "Tests/CodeClones3/Example1.java": 65.2173913
+    },
+    "LineCountOfFiles": {
+     "Tests/CodeClones3/Example2.java": 23,
+     "Tests/CodeClones3/Example1.java": 23
+    },
+    "BiggestCloneClassLineSize": "7",
+    "NumberOfClonesClasses": 6,
+    "NumberOfDuplicatedLinesPerFile": {
+     "Tests/CodeClones3/Example2.java": 15,
+     "Tests/CodeClones3/Example1.java": 15
+    },
+    "PercentageOfDuplicatedLines": "65.2173913000%",
+    "BiggestCloneClassInMembers": [
+     "Tests/CodeClones3/Example2.java(7,12)",
+     "Tests/CodeClones3/Example1.java(7,12)",
+     "Tests/CodeClones3/Example1.java(26,27)",
+     "Tests/CodeClones3/Example2.java(26,27)",
+     "Tests/CodeClones3/Example1.java(15,21)",
+     "Tests/CodeClones3/Example2.java(16,22)"
+    ],
+    "BiggestCloneClassMemberCount": 2,
+    "TotalLineCountOfFolder": 46,
+    "ExampleClones": [
+     {
+      "SourceCode": "[\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],number(\\\"4\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],number(\\\"6\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],number(\\\"5\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],number(\\\"3\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],plus(id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],plus(id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")))]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[],stringLiteral(\\\"\\\\\\\"Hello world\\\\\\\"\\\"))]))\"]",
+      "Pair1": "Tests/CodeClones3/Example2.java(16,22)",
+      "Pair2": "Tests/CodeClones3/Example1.java(15,21)",
+      "NumberOfLines": "7"
+     },
+     {
+      "SourceCode": "[\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],number(\\\"4\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],number(\\\"6\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],number(\\\"5\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],number(\\\"3\\\"))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],plus(id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")))]))\",\"declarationStatement(variables([],int(),[variable(id(\\\"NormalizedName\\\"),[],plus(id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")))]))\",\"declarationStatement(variables([],simpleType(id(\\\"NormalizedName\\\")),[variable(id(\\\"NormalizedName\\\"),[],stringLiteral(\\\"\\\\\\\"Hello world\\\\\\\"\\\"))]))\"]",
+      "Pair1": "Tests/CodeClones3/Example1.java(15,21)",
+      "Pair2": "Tests/CodeClones3/Example2.java(16,22)",
+      "NumberOfLines": "7"
+     },
+     {
+      "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
+      "Pair1": "Tests/CodeClones3/Example1.java(7,12)",
+      "Pair2": "Tests/CodeClones3/Example2.java(7,12)",
+      "NumberOfLines": "6"
+     },
+     {
+      "SourceCode": "[\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"a\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"b\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"c\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"d\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"e\\\\\\\"\\\")]))\",\"expressionStatement(methodCall(qualifiedName([id(\\\"NormalizedName\\\"),id(\\\"NormalizedName\\\")]),[],id(\\\"NormalizedName\\\"),[stringLiteral(\\\"\\\\\\\"f\\\\\\\"\\\")]))\"]",
+      "Pair1": "Tests/CodeClones3/Example2.java(7,12)",
+      "Pair2": "Tests/CodeClones3/Example1.java(7,12)",
+      "NumberOfLines": "6"
+     },
+     {
+      "SourceCode": "[\"expressionStatement(methodCall([],id(\\\"NormalizedName\\\"),[]))\",\"expressionStatement(methodCall([],id(\\\"NormalizedName\\\"),[]))\"]",
+      "Pair1": "Tests/CodeClones3/Example1.java(26,27)",
+      "Pair2": "Tests/CodeClones3/Example2.java(26,27)",
+      "NumberOfLines": "2"
+     }
+    ],
+    "TotalNumberOfClonePairs": 30.0,
+    "BiggestCloneClassInLines": "[\"Tests/CodeClones3/Example1.java(15,21)\",\"Tests/CodeClones3/Example2.java(16,22)\"]"
+   }
+  }
+ ]
+}
